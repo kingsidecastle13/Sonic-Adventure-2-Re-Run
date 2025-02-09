@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="main" display="0 • SECW Main Features  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="aSave" display="Autosaving" type="eASAVE" defaultvalue="0">
+				<HelpText>Enables the AutoSave feature! Times are roughly the length of the interval between each AutoSave, set to what suits your playstyle best!</HelpText>
+			</Property>
+			<Property name="multisaving" display="Multisaving" type="eBOOL" defaultvalue="0">
+				<HelpText>Using L-Ctrl, L-Shift, and the num keys on keyboard, or Z (RB, R1, R) and Dpad up and down on Gamepad, you can switch between 20 Chao saves! Allowing for 480 simultaneous Chao!</HelpText>
+			</Property>
+			<Property name="bSave" display="Auto-Backup" type="eBOOL" defaultvalue="0">
+				<HelpText>Automatically backs up your Chao when you enter Chao World. (By default they're in the SAVEDATA folder, but you can manually set your own folder!)</HelpText>
+			</Property>
+			<Property name="mutate" display="Chao Breeding Mutations" type="eBOOL" defaultvalue="1">
+				<HelpText>Gives newborn Chao a rare, 6% chance to mutate. This only affects them visually, and only takes effect after they hatch.</HelpText>
+			</Property>
+			<Property name="unChar" display="Unlockable Character Chao" type="eBOOL" defaultvalue="0">
+				<HelpText>Chao can be evolved into a Character Chao using the required eggshell hats, animals, and filing out the other requirements! (Doesn't work with CWE)</HelpText>
+			</Property>
+			<Property name="eCToys" display="Extra Chao Toys" type="eBOOL" defaultvalue="1">
+				<HelpText>Allow Chao to use the unused rattles based on their alignment!</HelpText>
+			</Property>
+			<Property name="eGToys" display="Extra Garden Toys" type="exToyEnum" defaultvalue="2">
+				<HelpText>Allow all toys to spawn in all gardens! (Safety option will only spawn the toys if toy spawn locations are set for the current custom garden)</HelpText>
+			</Property>
+			<Property name="bAge" display="Enhanced Fruit Mechanics" type="eBOOL" defaultvalue="1">
+				<HelpText>Fruit aging is reworked and based on time! Rather than random actions like pausing.</HelpText>
+			</Property>
+			<Property name="enhanced_camera" display="Enhanced Chao World Camera" type="eLEGACY" defaultvalue="2">
+				<HelpText>A better camera for Chao World! Analog input, vertical movement, freeze, and panning in advanced mode!</HelpText>
+			</Property>
+			<Property name="cTranType" display="Chao Transporter Type" type="eTRANSPORT" defaultvalue="3">
+				<HelpText>Select which transporter you'd like the gardens to use!</HelpText>
+			</Property>
+		</Group>
+		<Group name="shadows" display="1 • Enhanced Shadows  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="mode_num" display="Enhanced Shadows" type="eLEGACY" defaultvalue="2">
+				<HelpText>A completely overhauled Chao shadow system which fixes many issues and has many visual advantages over vanilla! (Legacy is the pre-1.4.1 version)</HelpText>
+			</Property>
+			<Property name="kind_chao" display="Chao Shadows" type="eSHAD_CHAO" defaultvalue="2">
+				<HelpText>What type of shadows Chao should use! Multiple applies shadows to different parts of a Chao's body, while single only uses one!</HelpText>
+			</Property>
+			<Property name="toy_shadows" display="Toy Shadows" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the shadows under the garden toys that were lost when the game was ported to GameCube!</HelpText>
+			</Property>
+			<Property name="kind_num" display="Shadow Type" type="eSHAD_SHAPE" defaultvalue="0">
+				<HelpText>The type of shadows used for Enhanced Shadows! Solid is pure models, soft use a soft texture</HelpText>
+			</Property>
+		</Group>
+		<Group name="rest" display="2 • Restorations  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="lobby_msger" display="Omochao Greetings" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores Omochao greeting you in the Chao Lobby!</HelpText>
+			</Property>
+			<Property name="cRipple" display="Chao Ripples" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the water ripples as Chao swim that were lost when the game was ported to GameCube!</HelpText>
+			</Property>
+			<Property name="mSound" display="More Chao Sound" type="eBOOL" defaultvalue="0">
+				<HelpText>Allows Chao to make more varied sfx during gameplay by restoring unused sounds!</HelpText>
+			</Property>
+			<Property name="mAnim" display="More Chao Animations" type="eBOOL" defaultvalue="0">
+				<HelpText>Allows Chao to perform more varied animations during gameplay by restoring unused animations!</HelpText>
+			</Property>
+			<Property name="dxRun" display="SADX Race Animation" type="eBOOL" defaultvalue="0">
+				<HelpText>Your Chao will permanently sprint with their hands behind their back in Chao Races! (Requires More Chao Animations!)</HelpText>
+			</Property>
+			<Property name="altMush" display="Alt. Mushroom Restore" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the unused red, alternate Mushroom texture! Making the Base and Alt. Mushrooms easier to tell apart!</HelpText>
+			</Property>
+			<Property name="chaosJngl" display="Restore Unused Chaos Jingles" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the unused Chaos Chao evolve jingles! In vanilla, only dark is used, but there is a hero one! (Doesn't work with CWE)</HelpText>
+			</Property>
+			<Property name="racTail" display="Restore Raccoon Tail" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the unused Raccoon tails, which exist within the game but were never implemented.</HelpText>
+			</Property>
+			<Property name="wings" display="Wings Match Chao" type="eBOOL" defaultvalue="0">
+				<HelpText>Wing color and texture match the Chao that they're attatched to.</HelpText>
+			</Property>
+			<Property name="dcMiles" display="DC Tails Animations" type="eAMILES" defaultvalue="1">
+				<HelpText>Use the DC animations for Tails in the Chao gardens! Either only moving while holding something, or all his anims! (turn off anims in DC characters mod)</HelpText>
+			</Property>
+			<Property name="dcTran" display="DC Transition Woosh" type="eWOOSH" defaultvalue="0">
+				<HelpText>Swaps the garden transition sound for the deeper and slower DC variant. Second option allows the sound to fully play out!</HelpText>
+			</Property>
+			<Property name="dcClass" display="DC Classroom Music" type="eBOOL" defaultvalue="0">
+				<HelpText>The Classroom will continue to play the normal Kindergarten music, just like Dreamcast!</HelpText>
+			</Property>
+			<Property name="gFont" display="GCN Chao Font" type="eBOOL" defaultvalue="0">
+				<HelpText>Replaces the font in Chao world with the one from GCN, which also fixes errors with letter spacing.</HelpText>
+			</Property>
+			<Property name="gcTitl" display="GCN Stagetitles" type="eBOOL" defaultvalue="0">
+				<HelpText>Uses the original Stagetitles for SA2B!</HelpText>
+			</Property>
+		</Group>
+		<Group name="game" display="3 • Gameplay Changes  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="eggSet" display="Use Random Egg Sets" type="eBOOL" defaultvalue="1">
+				<HelpText>Randomizes the egg sets in the BM, allowing all saves to buy all types of Eggs!</HelpText>
+			</Property>
+			<Property name="bFruit" display="Better Chao Fruit" type="eBOOL" defaultvalue="1">
+				<HelpText>Increases the points given by the "Chao Fruit" from 12 to 30 points in each stat.</HelpText>
+			</Property>
+			<Property name="bDrive" display="Better Chaos Drives" type="eBOOL" defaultvalue="1">
+				<HelpText>Increases the points given by "Chaos Drives" from 24 to 40 points in each stat including Luck and Intel.</HelpText>
+			</Property>
+			<Property name="bMush" display="Better Mushroom Fruit" type="eBOOL" defaultvalue="1">
+				<HelpText>Increases the points given by the Base/Alt Mushrooms from 12/20 to 42/55, and gives 42/55 to Luck and Intel.</HelpText>
+			</Property>
+			<Property name="gCap" display="Max Chao Garden Cap" type="int" defaultvalue="24">
+				<HelpText>Increases the max Chao cap in the Gardens. 8 or under is considered off.</HelpText>
+			</Property>
+			<Property name="clamber" display="Chao Climbing Patch" type="eBOOL" defaultvalue="1">
+				<HelpText>Chao can climb infinitely, rather than falling after a certain distance, to stop them getting stuck in loops.</HelpText>
+			</Property>
+			<Property name="lHop" display="More Flying" type="eBOOL" defaultvalue="0">
+				<HelpText>Makes Chao 100% likely to fly when reaching an edge! Unless they want to swim or can't fly, where they will hop! (They won't fall in water as much!)</HelpText>
+			</Property>
+			<Property name="f2C" display="Fly 2 Climb" type="eBOOL" defaultvalue="1">
+				<HelpText>Allows Chao to transition to climbing while flying! Usefull in taller maps and the Enhanced Gardens!</HelpText>
+			</Property>
+			<Property name="enSpin" display="Enable Spindash" type="eBOOL" defaultvalue="0">
+				<HelpText>Enable or disable the ability to spindash and somersault in the Chao Gardens.</HelpText>
+			</Property>
+			<Property name="enAge" display="Enable Fruit Aging" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables fruit to age with the above option! With this disabled, your garden will likely become full quickly, as fruit won't ever rot. (Max 40 fruit)</HelpText>
+			</Property>
+			<Property name="qExit" display="Quick Exit" type="eBOOL" defaultvalue="1">
+				<HelpText>Allows you to quickly exit Chao World without saving by pressing L, R, and Y while paused.</HelpText>
+			</Property>
+			<Property name="dxAlign" display="SADX-like Alignment" type="eBOOL" defaultvalue="0">
+				<HelpText>Only Hero and Dark fruit can change a Chao's alignment, making Neutrals easier and stopping random shifts that are out of your control.</HelpText>
+			</Property>
+			<Property name="garden_apos" display="Vanilla Garden Alignment" type="eBOOL" defaultvalue="0">
+				<HelpText>Enable or disable the vanilla feature that changes a childs alignment depending on the garden they're in.</HelpText>
+			</Property>
+			<Property name="garden_grow" display="Garden Growth Differences" type="ePARAMGROW" defaultvalue="0">
+				<HelpText>Enable or disable the vanilla feature that changes an adults natural growth speed by different amounts depending on the garden.</HelpText>
+			</Property>
+		</Group>
+		<Group name="visu" display="3 • Visual Options  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="cParts" display="Chaos/Char. Chao Have Parts" type="eBOOL" defaultvalue="1">
+				<HelpText>Allows Chaos and Character Chao to display their animal parts. They can get them in vanilla, but they're hidden from view, this option re-enables them.</HelpText>
+			</Property>
+			<Property name="cEyes" display="Emotive Chaos Eyes" type="eBOOL" defaultvalue="1">
+				<HelpText>Allows Chaos Chao's eyes to be more emotive, rather than being locked to their default look!</HelpText>
+			</Property>
+			<Property name="dEyes" display="No Dark Mean Eyes" type="eBOOL" defaultvalue="1">
+				<HelpText>Disables Dark Chao having angry eyes forced on them after evolving. On by default due to a bug that stops them from being removed after reincarnation.</HelpText>
+			</Property>
+			<Property name="cKnux" display="Knux Chao Icon" type="eBOOL" defaultvalue="1">
+				<HelpText>Switches the Knuckles Chao icon, or emote ball, color to a better suiting yellow color, before it was green and matched the Tails Chao.</HelpText>
+			</Property>
+			<Property name="mayuSpd" display="Chao Cocoon Time" type="MayuTime" defaultvalue="0">
+				<HelpText>Halves or doubles the time that Chao are in their evolution and reincarnation cocoons for.</HelpText>
+			</Property>
+			<Property name="void" display="Enable Void Chao" type="eBOOL" defaultvalue="1">
+				<HelpText>With this off, Void Chao, or White (UNUSED), will render as a normal white. Included in CWE Color Comp.!</HelpText>
+			</Property>
+			<Property name="objCull" display="Disable Object Culling" type="eBOOL" defaultvalue="1">
+				<HelpText>Stops garden objects being culled when too far away, useful for larger gardens and the Enhanced Gardens!</HelpText>
+			</Property>
+			<Property name="tranSkp" display="Skip Garden Transition" type="eBOOL" defaultvalue="0">
+				<HelpText>Speeds up the garden transition so passing through garden gates is more snappy!</HelpText>
+			</Property>
+			<Property name="jTitl" display="Japanese Stagetitles" type="eBOOL" defaultvalue="0">
+				<HelpText>Switch the language of the Stagetitles (Eng ⇋ Jap).</HelpText>
+			</Property>
+			<Property name="enShadd" display="Disable Chao Shadows" type="eBOOL" defaultvalue="0">
+				<HelpText>Enable or disable the shadows on Chao and other Chao world objects such as fruit and Chaos Drives.</HelpText>
+			</Property>
+		</Group>
+		<Group name="neut" display="4 • Chao Garden Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="use" display="Chao Garden Version" type="eNEUT" defaultvalue="1">
+				<HelpText>Which varient of the garden SECW will use!</HelpText>
+			</Property>
+			<Property name="vert" display="Use Vertex Colors" type="eBOOL" defaultvalue="1">
+				<HelpText>May need to be disabled for certain texture paks. Leave on unless specified by the texture mod creator.</HelpText>
+			</Property>
+			<Property name="tree" display="Chao Garden Trees" type="eTREES" defaultvalue="0">
+				<HelpText>Use the SADX trees over the default garden trees.</HelpText>
+			</Property>
+			<Property name="tran" display="Transporter: Chao Garden" type="eBOOL" defaultvalue="1">
+				<HelpText>Enable or disable the Transporter in this garden.</HelpText>
+			</Property>
+		</Group>
+		<Group name="hero" display="5 • Hero Garden Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="use" display="Hero Garden Version" type="eHERO" defaultvalue="1">
+				<HelpText>Which varient of the garden SECW will use!</HelpText>
+			</Property>
+			<Property name="vert" display="Use Vertex Colors" type="eBOOL" defaultvalue="1">
+				<HelpText>May need to be disabled for certain texture paks. Leave on unless specified by the texture mod creator.</HelpText>
+			</Property>
+			<Property name="tree" display="Hero Garden Trees" type="eTREES" defaultvalue="0">
+				<HelpText>Use the SADX trees over the default garden trees.</HelpText>
+			</Property>
+			<Property name="tran" display="Transporter: Hero Garden" type="eBOOL" defaultvalue="1">
+				<HelpText>Enable or disable the Transporter in this garden.</HelpText>
+			</Property>
+		</Group>
+		<Group name="dark" display="6 • Dark Garden Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="use" display="Dark Garden Version" type="eDARK" defaultvalue="1">
+				<HelpText>Which varient of the garden SECW will use!</HelpText>
+			</Property>
+			<Property name="vert" display="Use Vertex Colors" type="eBOOL" defaultvalue="1">
+				<HelpText>May need to be disabled for certain texture paks. Leave on unless specified by the texture mod creator.</HelpText>
+			</Property>
+			<Property name="tree" display="Dark Garden Trees" type="eTREES" defaultvalue="0">
+				<HelpText>Use the SADX trees over the default garden trees.</HelpText>
+			</Property>
+			<Property name="tran" display="Transporter: Dark Garden" type="eBOOL" defaultvalue="1">
+				<HelpText>Enable or disable the Transporter in this garden.</HelpText>
+			</Property>
+		</Group>
+		<Group name="lobby" display="7 • Chao Lobby Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="use" display="Use Enhanced Lobby" type="eBOOL" defaultvalue="1">
+				<HelpText>The Enhanced lobby comes with a slew of rendering fixes and other minor enhancements! (All options requre it on!).</HelpText>
+			</Property>
+			<Property name="open" display="Open Lobby" type="OpenLobby" defaultvalue="0">
+				<HelpText>Remove the Roof Dome and/or the Floor Dome in the Lobby to open it up! *Requires Enhanced Lobby!</HelpText>
+			</Property>
+			<Property name="stair" display="Glowy Stairs" type="eBOOL" defaultvalue="0">
+				<HelpText>Remove shadows from the stairs, making them look glowy and more magical! *Requires Enhanced Lobby!</HelpText>
+			</Property>
+			<Property name="glow" display="Glowy Glow" type="eBOOL" defaultvalue="0">
+				<HelpText>Remove shadows from the gate glows! *Requires Enhanced Lobby!</HelpText>
+			</Property>
+		</Group>
+		<Group name="kind" display="8 • Kindergarten Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="use" display="Use Enhanced Kindergarten" type="eBOOL" defaultvalue="1">
+				<HelpText>Use the Enhanced Kindergarten over Vanilla! (Some options requre it, and are marked with *).</HelpText>
+			</Property>
+			<Property name="tabl" display="*Enable Table" type="eBOOL" defaultvalue="1">
+				<HelpText>Enable or Disable the table in the center of the Kindergarten seen in the Dreamcast version.</HelpText>
+			</Property>
+			<Property name="skip_ent" display="Skip Entrance" type="eBOOL" defaultvalue="0">
+				<HelpText>Skip the tedius trip in and out the Kindergarten every time you enter and leave! You will instantly spawn in the Kinder Lobby!</HelpText>
+			</Property>
+			<Property name="enLib" display="Use Library over Fortune Teller" type="eLIBRARY" defaultvalue="0">
+				<HelpText>Replaces the Fortune Teller room with the unused Library! Made by SPEEPSHighway.</HelpText>
+			</Property>
+			<Property name="eClass" display="Dynamic Classroom Chao" type="eCLASSCHAO" defaultvalue="2">
+				<HelpText>If your Chao is in class, they will spawn in the classroom over the generic Chao! Or spawn only your Chao, and leave empty otherwise!</HelpText>
+			</Property>
+			<Property name="rTimer" display="Black Market Restock Time" type="eBM_TIME" defaultvalue="3">
+				<HelpText>A few settings that change how long the Black Market takes to Restock it's stock. In vanilla it's 3 -> 7 minutes.</HelpText>
+			</Property>
+		</Group>
+		<Group name="race" display="9 • Race Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="rFixes" display="General Race Fixes" type="eBOOL" defaultvalue="1">
+				<HelpText>Fixes various collision issues and shadow rendering issues in the Races. Unless there's a specific reason, this should be left on.</HelpText>
+			</Property>
+			<Property name="rCam" display="Switch Focused Chao" type="eBOOL" defaultvalue="1">
+				<HelpText>Use left and right on the Dpad, or A and D on keyboard, to switch which Chao is currently in focus during a race.</HelpText>
+			</Property>
+			<Property name="enMap" display="Disable the Race Mini-map" type="eBOOL" defaultvalue="0">
+				<HelpText>Enable or Disable the Mini-map show during Chao races.</HelpText>
+			</Property>
+			<Property name="pQROCK" display="Quiz Rock Restore" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the intended rock that should fall when a Chao gets a question wrong, over Omochao!</HelpText>
+			</Property>
+			<Property name="raceAdv" display="Chao Race Adventure" type="eRACEADV" defaultvalue="0">
+				<HelpText>Allows you the player to run freely during Chao races, however you can't tell your Chao to sprint anymore.</HelpText>
+			</Property>
+			<Property name="enShadd" display="Enable Shadows in Races" type="eBOOL" defaultvalue="1">
+				<HelpText>Re-enables shadows in races which were removed from the GCN version up.</HelpText>
+			</Property>
+		</Group>
+		<Group name="sfx" display="A • SFX Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="sfxFix" display="Enhanced SFX Volume" type="eBOOL" defaultvalue="1">
+				<HelpText>Reduces the volume of Chao World SFX to better match DC! (Auto-disables with SA2 Volume Controls mod)</HelpText>
+			</Property>
+			<Property name="jingle" display="Level Up Jingle" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables or Disables the Chao level up jingle that causes the music to Restock.</HelpText>
+			</Property>
+			<Property name="AnimJump" display="Animal Jump Sound" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables or Disables the sound an animal makes when it jumps.</HelpText>
+			</Property>
+			<Property name="sfxChao" display="Chao Garden" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables or Disables the sfx in the Chao Garden. (Eg. The waterfall)</HelpText>
+			</Property>
+			<Property name="sfxHero" display="Hero Garden" type="eHSFX" defaultvalue="3">
+				<HelpText>Enables or Disables the sfx in the Hero Garden. (Eg. Bells and the fountain)</HelpText>
+			</Property>
+			<Property name="sfxDark" display="Dark Garden" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables or Disables the sfx in the Dark Garden. (Eg. Howling and flapping)</HelpText>
+			</Property>
+		</Group>
+		<Group name="chaodj" display="B • Chao World DJ  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="neut_garden" display="Chao Garden" type="eADXS" defaultvalue="19">
+				<HelpText>Select what music will play in the Chao Garden.</HelpText>
+			</Property>
+			<Property name="hero_garden" display="Hero Garden" type="eADXS" defaultvalue="18">
+				<HelpText>Select what music will play in the Hero Garden.</HelpText>
+			</Property>
+			<Property name="dark_garden" display="Dark Garden" type="eADXS" defaultvalue="17">
+				<HelpText>Select what music will play in the Dark Garden.</HelpText>
+			</Property>
+			<Property name="kinder_main" display="Kindergarten" type="eADXS" defaultvalue="14">
+				<HelpText>Select what music will play in the Kindergarten.</HelpText>
+			</Property>
+			<Property name="chao_hall" display="Chao Lobby" type="eADXS" defaultvalue="13">
+				<HelpText>Select what music will play in the Kindergarten.</HelpText>
+			</Property>
+			<Property name="race_beginner" display="Beginner Races" type="eADXS" defaultvalue="9">
+				<HelpText>Select what music will play during the Beginner Races.</HelpText>
+			</Property>
+			<Property name="race_jewel" display="Jewel Races" type="eADXS" defaultvalue="8">
+				<HelpText>Select what music will play during the Jewel Races and 2p Chao Races.</HelpText>
+			</Property>
+			<Property name="race_challenge" display="Challenge Races" type="eADXS" defaultvalue="7">
+				<HelpText>Select what music will play during the Challenge Races.</HelpText>
+			</Property>
+			<Property name="race_hero" display="Hero Races" type="eADXS" defaultvalue="6">
+				<HelpText>Select what music will play during the Hero Races.</HelpText>
+			</Property>
+			<Property name="race_dark" display="Dark Races" type="eADXS" defaultvalue="5">
+				<HelpText>Select what music will play during the Dark Races.</HelpText>
+			</Property>
+			<Property name="race_multiplayer" display="Multiplayer Races" type="eADXS" defaultvalue="8">
+				<HelpText>Select what music will play during the Multiplayer Races.</HelpText>
+			</Property>
+			<Property name="karate_battle" display="Karate Battle" type="eADXS" defaultvalue="2">
+				<HelpText>Select what music will play during a Karate match.</HelpText>
+			</Property>
+			<Property name="transporter_main" display="Chao Transporter" type="eADXS" defaultvalue="1">
+				<HelpText>Select what music will play in the Kindergarten.</HelpText>
+			</Property>
+		</Group>
+		<Group name="fix" display="C • Game Fixes  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="ballFix" display="Chao Ball Collision Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Fixes the collision on the garden beach balls, which is normally comically too large on the PC port.</HelpText>
+			</Property>
+			<Property name="stuckFix" display="Chao Stuck Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Patches the issue where Chao would get stuck on the garden objects, such as the hero garden pillars.</HelpText>
+			</Property>
+			<Property name="crayFix" display="Crayon Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Flips the Crayon model around, which usually impales a Chao's hand as they use it!</HelpText>
+			</Property>
+			<Property name="grapFix" display="Grapes Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the broken Grapes model! This is a recreation made via context clues, as the original model is lost.</HelpText>
+			</Property>
+			<Property name="ripFix" display="Ripple Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Fixes the water ripples rendering under the water, so it's more like DC! (Affects whole game)</HelpText>
+			</Property>
+			<Property name="frustrum_cull" display="Frustrum Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Fixes objects barely off-screen culling too early in Chao World!</HelpText>
+			</Property>
+			<Property name="minimal_sfx" display="Minimal SFX Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the correct SFX sounds to minimals in the garden! In the HD port, they were all randomly jumbled!</HelpText>
+			</Property>
+			<Property name="skFix" display="Kindergarten SFX Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Restores the 'boing' sound when exiting a room or the Black Market in the Kindergarten, like Dreamcast and GameCube!</HelpText>
+			</Property>
+			<Property name="karaFix" display="Karate Widescreen Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Patches up the holes in Chao Karate to better fit 16:9 or more displays!</HelpText>
+			</Property>
+			<Property name="rand" display="RNG and Spawn Points Fix" type="eBOOL" defaultvalue="1">
+				<HelpText>Fixes SA2's random number generation, which is completely broken in the HD ports.</HelpText>
+			</Property>
+		</Group>
+		<Group name="tool" display="D • Tools and Utility  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="deco" display="Use Decorations (Performance)" type="eBOOL" defaultvalue="1">
+				<HelpText>Completely disable the garden decorations, it may give you a performance boost! (Enhanced Gardens only)</HelpText>
+			</Property>
+			<Property name="tstMap" display="Green-Screen Garden" type="eTSTMAP" defaultvalue="0">
+				<HelpText>Replaces the Neutral Garden with 5 boxes of solid color, for screenshots. (Tails will cause crashes, use Sonic)</HelpText>
+			</Property>
+			<Property name="disable_splash"	display="Disable Startup Splash" type="eBOOL" defaultvalue="0">
+				<HelpText>Disables generic startup splashes for ECW.</HelpText>
+			</Property>
+			<Property name="warning_supression" display="Warning Suppression" type="eWARN" defaultvalue="0">
+				<HelpText>Supress ECW popups. These are here for good reason, so only disable them if you know exactly what you're doing.</HelpText>
+			</Property>
+			<Property name="bakDir" display="Backup Directory" type="string" defaultvalue="">
+				<HelpText>Custom Backup directory, eg. "D:\Backups\SA2\Chao". Leave blank for default SAVEDATA folder!</HelpText>
+			</Property>
+		</Group>
+		<Group name="compatability" display="Z • Mod Compatibility Settings  ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡">
+			<Property name="cwe_colors" display="CWE Mixed Colors" type="eBOOL" defaultvalue="0">
+				<HelpText>Enables the CWE Mixed colors to be visible without CWE! (Permission from CWE devs.)</HelpText>
+			</Property>
+			<Property name="chao_cam" display="Exant's Chao Camera" type="eBOOL" defaultvalue="1">
+				<HelpText>Enables compatibility with Exant's Chao Camera mod and the Enhanced Chao World Camera feature!</HelpText>
+			</Property>
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name="eBOOL">
+			<EnumMember name="1" display="Enabled"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eNEUT">
+			<EnumMember name="1" display="Enhanced Chao Garden"></EnumMember>
+			<EnumMember name="0" display="Vanilla/Modded"></EnumMember>
+		</Enum>
+		<Enum name="eHERO">
+			<EnumMember name="1" display="Enhanced Hero Garden"></EnumMember>
+			<EnumMember name="0" display="Vanilla/Modded"></EnumMember>
+		</Enum>
+		<Enum name="eDARK">
+			<EnumMember name="1" display="Enhanced Dark Garden"></EnumMember>
+			<EnumMember name="0" display="Vanilla/Modded"></EnumMember>
+		</Enum>
+		<Enum name="eHSFX">
+			<EnumMember name="3" display="Enabled"></EnumMember>
+			<EnumMember name="2" display="Sounds only"></EnumMember>
+			<EnumMember name="1" display="Fountain only"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eTREES">
+			<EnumMember name="3" display="SA2DC"></EnumMember>
+			<EnumMember name="2" display="SADX"></EnumMember>
+			<EnumMember name="1" display="SADC"></EnumMember>
+			<EnumMember name="0" display="Vanilla/Modded"></EnumMember>
+		</Enum>
+		<Enum name="eASAVE">
+			<EnumMember name="4" display="Enabled (32 mins)"></EnumMember>
+			<EnumMember name="3" display="Enabled (16 mins)"></EnumMember>
+			<EnumMember name="2" display="Enabled ( 8 mins)"></EnumMember>
+			<EnumMember name="1" display="Enabled ( 4 mins)"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eBM_TIME">
+			<EnumMember name="5" display="Always Restock"></EnumMember>
+			<EnumMember name="4" display="Restock Every 3 Mins"></EnumMember>
+			<EnumMember name="3" display="Restock Every 5 Mins"></EnumMember>
+			<EnumMember name="2" display="Restock Every 7 Mins"></EnumMember>
+			<EnumMember name="1" display="Restock Every 10 Mins"></EnumMember>
+			<EnumMember name="0" display="Off/Vanilla"></EnumMember>
+		</Enum>
+		<Enum name="OpenLobby">
+			<EnumMember name="3" display="Remove the Hero and Dark Dome"></EnumMember>
+			<EnumMember name="2" display="Remove the Hero Dome"></EnumMember>
+			<EnumMember name="1" display="Remove the Dark Dome"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eLIBRARY">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Enabled w/o new textures"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eTSTMAP">
+			<EnumMember name="2" display="Enabled (No Line Guides)"></EnumMember>
+			<EnumMember name="1" display="Enabled"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="mSpeed">
+			<EnumMember name="2" display="Just Child"></EnumMember>
+			<EnumMember name="1" display="Child and Adult"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="MayuTime">
+			<EnumMember name="2" display="Faster"></EnumMember>
+			<EnumMember name="1" display="Slower"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="SADXRaceRun">
+			<EnumMember name="2" display="Always in Races"></EnumMember>
+			<EnumMember name="1" display="Randomly in Races"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eAMILES">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Hold only"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eTRANSPORT">
+			<EnumMember name="3" display="Enhanced Transporter"></EnumMember>
+			<EnumMember name="2" display="GBA Transporter"></EnumMember>
+			<EnumMember name="1" display="Vanilla (Small)"></EnumMember>
+			<EnumMember name="0" display="Vanilla"></EnumMember>
+		</Enum>
+		<Enum name="eADXS">
+			<EnumMember name="19" display="Chao Garden"></EnumMember>
+			<EnumMember name="18" display="Hero Garden"></EnumMember>
+			<EnumMember name="17" display="Dark Garden"></EnumMember>
+			<EnumMember name="16" display="SA/DX Garden"></EnumMember>
+			<EnumMember name="15" display="AutoDemo Garden"></EnumMember>
+			<EnumMember name="20" display="Tiny Chao Garden"></EnumMember>
+			<EnumMember name="14" display="Kindergarten"></EnumMember>
+			<EnumMember name="13" display="Chao Lobby Extended"></EnumMember>
+			<EnumMember name="12" display="Chao Lobby"></EnumMember>
+			<EnumMember name="11" display="Chao Lobby (DC)"></EnumMember>
+			<EnumMember name="10" display="Race Entrance"></EnumMember>
+			<EnumMember name="9" display="Beginner Race"></EnumMember>
+			<EnumMember name="8" display="Jewel Race"></EnumMember>
+			<EnumMember name="7" display="Challenge Race"></EnumMember>
+			<EnumMember name="6" display="Hero Race"></EnumMember>
+			<EnumMember name="5" display="Dark Race"></EnumMember>
+			<EnumMember name="4" display="SA/DX Race"></EnumMember>
+			<EnumMember name="21" display="Tiny Chao Minigame"></EnumMember>
+			<EnumMember name="3" display="Karate Entrance"></EnumMember>
+			<EnumMember name="2" display="Karate Battle"></EnumMember>
+			<EnumMember name="1" display="Chao Transporter"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="exToyEnum">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Safety"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eCLASSCHAO">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Only Player Chao"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eWOOSH">
+			<EnumMember name="2" display="Enabled+Slower Transition"></EnumMember>
+			<EnumMember name="1" display="Enabled"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eSHAD_SHAPE">
+			<EnumMember name="0" display="Solid"></EnumMember>
+			<EnumMember name="1" display="Soft (SADX)"></EnumMember>
+			<EnumMember name="2" display="Very Soft"></EnumMember>
+		</Enum>
+		<Enum name="eLEGACY">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Enabled (Legacy)"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eSHAD_CHAO">
+			<EnumMember name="2" display="Multiple"></EnumMember>
+			<EnumMember name="1" display="Single (SADX)"></EnumMember>
+			<EnumMember name="0" display="Single (Vanilla)"></EnumMember>
+		</Enum>
+		<Enum name="eRACEADV">
+			<EnumMember name="2" display="Enabled"></EnumMember>
+			<EnumMember name="1" display="Enabled (Old Cam)"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="ePARAMGROW">
+			<EnumMember name="3" display="Enabled (Vanilla)"></EnumMember>
+			<EnumMember name="2" display="Enabled (All Faster)"></EnumMember>
+			<EnumMember name="1" display="Enabled (All Slower)"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eWARN">
+			<EnumMember name="2" display="Alerts and Errors"></EnumMember>
+			<EnumMember name="1" display="Alerts"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+  </Enums>
+</ConfigSchema>

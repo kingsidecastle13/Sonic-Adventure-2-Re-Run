@@ -1,0 +1,917 @@
+######################## ######################## ######################## ########################
+SECW v1.4.1.3
+
+**__-- Misc Fixes --__**
+• 'Disable Chao Shadows' now no longer crashes with vanilla shadows, and disables the enhanced shadows
+
+######################## ######################## ######################## ########################
+SECW v1.4.1.2
+
+**__-- ECW Store --__**
+• Garden fruit were accidentally on sale over the Hero and Dark fruit, this has been fixed
+
+**__-- Misc Changes --__**
+• Now uses Orca::FileExists() function to detect files
+• Added the new ModID tag, sa2.247966240
+• Safety net to stop players falling forever has been lowered to -72 units
+
+**__-- Misc Fixes --__**
+• Race Cam Switcher always detected a right press, even if it was left
+• Animated garden textures no longer duplicate if you teleport to the garden you're currently in
+
+######################## ######################## ######################## ########################
+SECW v1.4.1.1
+
+**__-- Omochao Greetings --__**
+• Will now no longer spawn if 'Disable Omochao' code is enabled, to prevent crashing
+
+######################## ######################## ######################## ########################
+SECW v1.4.1
+
+**__-- Sleep Mode & Mod Checks <NEW!> --__**
+• Checks for old mod loader version and will throw an error 
+• Checks for old enhanced mods and throws a warning for you to disable/uninstall them
+• Crudely checks for other garden mods and throws a warning for you to disable them or the enhanced garden
+
+**__-- Omochao Greetings! <NEW!> --__**
+• Omochao now spawns in the Chao Lobby when first entering Chao World
+• His behaviour mimmicks that of Dreamcast: returning to 0, 100, 0 then despawning
+
+**__-- Shadow Doll <NEW!> --__**
+• Shadow Doll now has a chance to appear rather than the vanilla Sonic Doll
+• Chance equasion is `ShadowChance = ((ShadowBond - SonicBond) * 0.0075) + 0.5` with 0 meaning 0%, and 1 meaning 100%
+• Shadow Doll model by AmberZeChao
+
+**__-- Restore Race Quiz Rock <NEW!> --__**
+• A custom made rock now replaces the Omochao that dropped from the ceiling when a Chao get's the quiz wrong
+• It was always intended to be a rock, but somehow a t-posing Omochao ended up being used
+• Model and Texture made by myself (Shaddatic)
+
+**__-- Skip Kindergarten Entrance <NEW!> --__**
+• Skips the animation of entering and exiting the Kindergarten
+
+**__-- Vanilla Garden Alignment <NEW!> --__**
+• Disables the gradual alignment shift for child Chao depending on the garden they're in
+
+**__-- Garden Growth Differences <NEW!> --__**
+• Disables or modifies the differences in Chao growth speed depending on the garden they're in
+
+**__-- Custom Control Bindings <NEW!> --__**
+• Old method for custom keyboard binds is depreciated
+• New method is in-game and allows for customizing gamepad controls
+
+**__-- *New* Enhanced Chao World Camera --__**
+• Rewrote system from scratch, old version moved to 'Legacy' option
+• Mouse controls have been added and can be enabled in the menu!
+• Freeze now locks camera aim position rather than the entire camera, allowing for camera movement while frozen!
+• Camera now detects it's distance from the floor, rather than 5 units above the players feet as the 'floor'!
+• Zooming feature added using dpad up & down with controller, and Page Up & Down for keyboard!
+• Holding the freeze button for 1 second now resets the camera!
+• Now supports Exant's Chao Cam mod, and will work alongside it! New easy toggle key added too!
+• The Simple camera mode has been rewritten entirely!
+
+**__-- *New* Enhanced Shadows! --__**
+• Completely rewritten and overhauled with completely custom engine, old version moved to 'Legacy' option
+• Shadows are now rendered physically in the scene, rather than a shader effect
+• Allows for many different and new options, including toy shadows and SADX shadows
+• Customizable shadow kinds, from solid to very soft
+• Shadow map size for legacy is no longer adjusted for races as it was very hacky for little gain now
+• Shadow shape fix for legacy has been removed, as the code is now used for non-legacy purposes
+
+**__-- Auto-Backup & Backup --__**
+• Rewrote folder creating code, folders are now only created as they are used!
+• Now supports saves up to 99
+
+**__-- Multisaving --__**
+• Renamed from 'Multisaves' to 'Multisaving'
+• Savefile names will no longer be all undercase, as is intended
+• Will now detect and throw an error if CWE's 'Multi Savefile' feature is enabled
+• Can now go up to 99 saves! But you can still only access 20 on a keyboard!
+• Added fast movement to Gamepad controls (aka, it quickly presses a direction if it is held down)
+• Removed 'CWE Names' option
+• Now checks and auto renames any out of date Save file names!
+• Renamed option in config, you'll need to re-set it! (done to avoid bugs)
+
+**__-- Chao Water Ripples --__**
+• Now appear in races too!
+• Code hooks greatly improved
+
+**__-- More Chao Anims/Sounds --__**
+• All functions re-written to be easier to manage, and to be more stable, with improved code hooks
+• Restored more chase anims that had to be removed due to crashing in a previous update
+• All of the anims will now play in races too where applicable
+• Code now checks current animation when a call is made, stopping the animation from randomly switching back and forth
+
+**__-- ECW Menu --__**
+• Added mouse option to Camera Menu
+• Rewrote Menu Engine entirely to make adding new features easier and faster!
+• Store now shows selected object above your head
+• Fixed an oversight where closing the menu with the B button would cause the sfx to play twice at once
+• Game config changes now save instantly rather than saving on menu close (Now using Orca's config r&w)
+• Renamed main menu to 'ECW Menu'
+• All menu titles are now auto centered with math!
+• The menu scale has been reduced
+• The menu width has been increased from 19 to 26 (17 to 24 for text)
+• The menu max height has been increased!
+• Fixed a potential crash that only appeared with a larger menu
+• Changed the some text and formats to accomodate larger space!
+• Added Controls menu inside the Options menu!
+
+**__-- Chao World DJ --__**
+• Chao World DJ now stays unactivated if left on default settings
+• Added Tiny Chao Garden music! (Tiny Chao Garden & Tiny Chao Minigame!)
+• Added Multiplayer Races as a new option, rather than it being tied to Jewel
+
+**__-- Splash Text --__**
+• Fixed a small chance of the startup splash screen displaying garbage, or completely crashing
+• Now toggleable! (Except for holidays)
+• Fixed holiday logic error for US and Canadian Thanksgivings, causing them to never show
+• ECW birthday splash now displays on the correct date! (Nov 30th)
+• Moar
+
+**__-- Enhanced Dark Garden --__**
+• The Dark garden has some new collision to clean up wonky physics, and to better support the new shadow system
+• Shadows now cast on a section of the hill that they previously didn't
+• No-vertex variant updated
+
+**__-- General Race Fixes --__**
+• Overhauled and optimized, no longer requires .lvl files, collision fix no longer requires a file at all
+• The Goal Shadow fix has been remade to accomodate the new enhanced shadows! (without this fix, they'd render under it)
+• The Peridot race start has had the colored floor lowered to fix a ground gap, and to accomodate the new enhanced shadows! (without this fix, they'd render under it)
+
+**__-- Configureation --__**
+• 'Wings Match Chao' is now default off
+• Removed unused enums from configschema
+• Changed many names in config menu, please recheck settings
+• Added Chao Camera compatibility option
+• Config menu formatting has changed to accomodate new, larger window
+
+**__-- Credits --__**
+• AmberZeChao has been moved up the credits list (TS1)
+• Krzys2 has been added to the credits list
+
+**__-- Integrated Mods --__**
+• Krzys2's Chao Transporter Fixes
+
+**__-- Misc Changes --__**
+• Undid original fix for the race/fruit texture error
+• 'Dynamic Classroom Chao' code hook greatly improved
+• New Rattle code hook greatly improved
+• Minor optimization to Chao name -> file name code
+• Initilization code is now multithreaded to improve mod loading time
+• Removed window tint option for Kindergarten
+• ECW now has a Category section in the mod loader! "Chao!"
+• Mod now runs on the Orca Mod Engine, rather than the default Mod Loader
+• CWE Mixed Colors now only applies when CWE is not installed/enabled
+• Chao Backup feature has again been mildly optimized
+• Karate Widescreen Fix has been overhauled and optimized, no longer requires .lvl files
+• Holidays are now checked on the fly, rather than only on startup
+• Optimized Waypoint display slightly
+• Updated a splash text to display the correct number of total Chao
+
+**__-- Misc Fixes --__**
+• Removed debug print when Chao eyes are switched
+• Fixed GBA transporters not working and crashing in the Hero & Dark gardens due to a typo
+• Fixed possible memory leak, very small if it existed
+• Fixed crash caused by the Vanilla transportes; I didn't know about it, and apparently it just stopped happening
+• Dark Garden's island no longer dissapears with certain combinations of characters, mods, and camera angles
+• Fixed description of 'Open Up Lobby'
+• Fixed issue with keyboard controls corrupting the stadium menu
+
+**__-- Base Game Fixes --__**
+• Fixed some textures breaking after playing a Chao race! This was "fixed" before but was easy to rebrake, now it's perma fixed
+• Objects in Chao World no longer frustrum cull too early (Frustrum Fix)
+• Fixed a Garden load crash caused by the ball not correctly destroying itself
+• Minimals now play the correct SFX in the garden
+• Fixed unhandled nullptr exception inside ALBHV_PickUpLockOn()
+• Fixed the start of the Onyx race having the floor be visually higher than the collision, causing Enhanced Shadows to render under the floor
+
+**__-- Removed Features --__**
+• 'DC Jewels' has been removed and added to a seperate download
+• 'DC Silver' has been removed and added to a seperate download
+• 'DC Mouths' has been removed and added to a seperate download
+• 'Win Eggs from Chao Races' has been removed, as the code had slowly degraded since v1.0 due to everything changing around it (CWE has a similar feature too, making it lower priority to fix)
+• 'Chao Growth Speed' has been removed, 'Garden Growth Differences' does it's job while remaining vanilla
+
+**__-- Known Issues --__**
+• 'Skip Kindergarten Entrance' won't let you leave first try if you didn't enter another room
+
+######################## ######################## ######################## ########################
+SECW v1.4.0.2
+
+**__-- Custom Keyboard Controls! --__**
+Keyboard controls can now be completely customized inside the 'controls.ini' file! Go to <https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes> to see all the key-codes!
+This also means the Pause key and camera keys options have been removed from config, as they are now customized in here!
+
+**__-- More Flying --__**
+Normally, when reaching an edge, a Chao has a 60% chance of jumping and 40% chance of gliding. This option removes this random chance, so Chao will always fly UNLESS they can't, or actually want to swim!
+
+**__-- SECW Menu --__**
+• Removed the left-side option symbol in the SECW Menu
+• Renamed a bunch of options to better take advantage of new space
+
+**__-- Misc Changes --__**
+• Made changes to the Chao Byte operator
+• Changed how variable fpsCount is calculated and when
+• Changed how extra garden toys are loaded, to be more compatible with CWE features
+• Multisave can now only be activated while on the Character select screen of Chao world, rather than the map screen in general
+• Up and down movement in Enhanced Camera has been slowed slightly
+• Extra folder now inside .7z file to make installing manually easier!
+
+**__-- Misc Fixes --__**
+• Fixed Hyper Chao check typo
+• Removed unused temp folder in PRS folder
+• Fixed 'Glowy Glow' option missing the Hero Gate's glow
+
+**__-- Base Game Fixes --__**
+• Edited some vanilla textures inside al_body so transparancy renders correctly:
+	• al_ncha00 // Neutral Hero Chao head texture
+	• al_ncha01 // Neutral Hero Chao arms texture
+
+######################## ######################## ######################## ########################
+SECW v1.4.0.1
+
+-- Misc Fixes --
+• Removed test debug prints from controller multisave
+• Fixed Dynamic Classroom Chao crash, it was due to eggs being reported as "in-class"
+
+######################## ######################## ######################## ########################
+SECW v1.4: The Update That Changed the World!
+
+-- *New* Auto-Updates! --
+From 1.4 forward, SECW will now support 1-Click Install and auto-updates! No longer do you have to worry about keeping your eyes peeled for updates! You'll be told when one releases, and it will be automatically installed!
+
+-- Enhanced Gardens/Areas --
+• Chao Garden has had minor changes to its geometry! All climbing points and loading zones have also been redone
+• Hero Garden has been completely overhauled! It's now much bigger and on par with the quality of the other gardens! All climbing points and loading zones have also been redone!
+• Dark Garden has been overhauled! The cauldron and graffiti make a much anticipated return! The tree has also been ported from the GCN garden, to add more life to this dead garden!
+• The Dark Garden Ball has been moved from {0, 0} to {-61, 29} to reduce the chance of it being kicked into the pool
+• Further edits have been made to the Black Market, it now renders 100% correctly
+• All gardens have been re-exported, names of texture files have been moved into the lvl files and out of the dll
+• All "Enhanced" areas now use vanilla texlists, except the Lobby
+• Renamed all .sa2blvl files
+
+-- *New* SECW Menu! --
+Introducing, new in 1.4, the SECW Menu! This new, handy menu de-confuses many SECW features, & allows for more control over many others! Tired of button combos? Well fret no more! 
+All combos are being retired & moved to the SECW Menu for easy access, and many options can now be configured in-game! Just press the back button on controller, or P (default) on keyboard, to open up
+this new world of possibilities!
+
+	• -- *New* Champ's ECW Market! --
+	Inside the new Menu, you will find the ECW Market! Here you can buy Eggs, fruits, seeds, and masks directly from the garden! After tax and delivery fees, these do end up slightly more expensive than their BM counterparts, 
+	but the convenience is worth it! Not to mention the items exclusively available, such as TT Shiny Eggs, and the GBA fruit! Just remember to thank Champ as he drops your items off, he is a good egg! 
+
+	• -- *New* Teleport! --
+	Inside the new SECW Menu's Toolbox, you can find the Teleport menu! Which at the press of a button will take you all across Chao World!
+	
+	• -- *New* Waypoint Visulizer! --
+	Whether you're making your own mod, or are just curious, you can now enable the waypoint visualizer through the options menu! Orignally a seperate mod made by Exant, then locked away in SECW behind a dev toggle, it's now 
+	available to all of you to use freely! The Waypoint menu allows you to toggle the visualizer, and move the waypoints up and down for easy viewing around hills and pits! Green means a ground waypoint, Blue means a water 
+	waypoint, Red means another waypoint (either unused or an Animal Swim Aim waypoint), & black means no waypoint!
+	
+	• -- Autosave & Qucksave (SOD) --
+	• Both have now been moved to the SECW Menu! Autosaving can now be adjusted and turned off via the Options menu, & the original button combo for Quicksaving (SOD) has been removed and is now activated in SECW's Main Menu!
+	The Anti-cheat in place from 1.0 has now also been disabled, as the bug it was preventing has been patched!
+	• Removed 2 minute Autosave timer option and added a 32 minute option
+
+	
+-- *New* Dynamic Classroom Chao --
+Ever found the Classroom overly generic? Well find no more! Your Chao will now dynamically appear in the Classroom while in class! Their position is random too! How dynamic!
+This option has two modes; Enabled & Only Player Chao
+Enabled will just filter in your Chao as they enter, leaving it looking vanilla otherwise. Only Player Chao will leave the classroom empty until you enroll your Chao, and then show only your Chao! 
+Sick of those generic Chao? Use this option!
+
+-- *New* Enhanced Fruit Aging Mechanics --
+In the vanilla game, fruit age up when you pause or leave the garden. When they reach an age of 9 (pausing or leaving 9 times), they rot and disappear from the garden.
+If that sound broken to you, then SECW 1.4 has you covered! Fruit aging mechanics have been completely re-worked in this update to be based on time, rather than random actions!
+*How it works!:*
+Every 15 seconds you're in a garden, all fruit in that garden age by 1 (except normal, Garden Fruit; which age by 7). Once a fruit reaches an age of 240 or above, they rot and will vanish next time you 
+enter the garden; this means Garden Fruit last around 9 minutes, while all other fruit last around an hour! 
+
+-- *New* Enhanced Chao World Camera --
+A brand new overhauld camera for Chao World allowing for analog input, vertical input, panning, freezing, and even options to invert the controls! It also comes with a Simple and Advanced mode: Simple 
+handles panning for you, which is great for gameplay; while advanced leaves panning to you via the Z button/LShift key!
+
+-- *New* Extra Garden Toys! --
+You heard right! All toys can now spawn in all gardens! No longer does the Chao Garden have the most toys at 3, they all now have 5! They will appear as you unlock them for you Chao to enjoy! No matter 
+their walk of life! If you use a custom/modded garden, and the toys spawn incorrectly, use the saftey option; this will disable spawns unless a garden specifically sets them (basically Enhanced only)
+
+-- *New* Extra Chao Toys! --
+The Dark and Hero rattles have been added to SECW! Which your Chao uses is based on their alignment:
+-1.00 -> -0.33 = Dark Rattle; 
+-0.33 ->  0.33 = Neutral Rattle; 
+ 0.33 ->  1.00 = Hero Rattle!
+ 
+-- *New* Enhanced Chao Lobby --
+The Lobby has finally got its enhanced makover for 1.4! While no significant difference has been made, all rendering issues have been fixed and the textures have been condensed into one file (ecw_stg_lobby_tex.pak)
+This now means one texture file affects all versions of the Lobby! And that all versions of the Lobby are now affected by the config options in SECW! An all around great addition! 
+
+-- *New* Chao Water Ripples --
+That's right! Chao make ripples once again! Lost since the Dreamcast version, Chao used to make ripples as they swam, making the garden feel more alive and dynamic; but finally, after 20 years, 
+the feature returns to SA2!
+
+-- *New* Fly 2 Climb --
+This ill named new feature allows Chao to transition to climbing from flying! If they hit a wall while in a climbing zone, they will latch onto the wall and begin scaling it! Rather that sliding their face against it!
+
+-- *New* Disable Object Culling --
+Enhanced Chao World's gardens have always ran into an issue where, at enough distance, the decorations will cull out. With the expansion of the Hero Garden, this became even more apparent. So! With this option enabled, 
+culling is disabled for all garden objects! There may actually be a slight performance benefit from having this on!
+
+-- *New* Skip Garden Transition --
+Speeds up the garden transition so passing through garden gates is more snappy!
+
+-- *New* DC Classroom Music --
+The Classroom will continue to play the normal Kindergarten music, just like on Dreamcast! No more, oddly creepy, singing!
+(This option will replaces the 'Disable Kindergarten SFX' option)
+
+-- *New* SADC & SA2 Garden Trees --
+More trees? You betcha! SADC have teleported all the way from 1998 to SECW 1.4! For 24 years old, they're looking mighty fine! And to top it off, the SA2 Dreamcast trees have also been resurected for 1.4! 
+And both are selectable per garden, along with SADX trees!
+
+-- *New* DC Tails Aniations --
+Use the DC animations for Tails in the Chao gardens! Either only moving while holding something, or all his animations!
+
+-- *New* Race Stagetitle & Japanese Stagetitles --
+Finally, after 8+ updates, the Race Entrance finally has its HD Stagetitle! And to celebrate, I've made HD versions of the Japanese variants of all stagetitles too!
+
+-- *New* Chao Shadow Shape --
+Allows you to change the shape of the Chao Shadows! Options are 'DC-Like' & 'Round!' This option is also the toggle for the fixed shadow model!
+
+-- *New* Chao World DJ v2! --
+• Merged into the main mod and greatly expanded! No more limitations on music, and far more areas to chose from! Has own section in Config Menu!
+
+-- *New* Emotive Chaos Eyes! --
+Allows Chaos Chao's eyes to be more emotive by removing the strict SetEye lock on Chaos Types!
+
+-- Random Egg Sets --
+• No longer has an emblem requirement!
+• Fixed an issue where 'Use Random Egg Sets' option was ignored, and defaulted to enabled
+
+-- GCN Garden Titles & GBA Transporters --
+• Merged into the Main mod, options added to the Config Menu!
+
+-- Enhanced Shadows --
+• Better Chao Shadows has been merged for technical reasons, and to reduce the number of possibly confusing options
+• The shadows of fruit will now dynamically change size depending on the size of the fruit! Meaning a more accurately sized shadow can now be used for all stages!
+• Optimized the size calculator function
+
+-- DC Transition Woosh --
+• Additional option now slows down the transition speed, allowing for the full sound clip to play!
+• DC Transition Woosh is no longer stuck on (this was due to the mod loader, not SECW. I just worked around it) 
+
+-- Gentile Hat/Mask Removal --
+• Now prints Menu Debug text when it fails, and why
+• Now uses new SpawnChaoHat() function
+• Mask will now match Chao's current rotation when removed
+
+-- Textures --
+• The highest quality version of all Chao textures have been found! They're included in this update by default! (Jewels look noticably better in-game!)
+• 'al_mouth_new.pak' and its variants have been removed, since the bug is primarily fixed now
+• 'al_newtexturechao.pak' has been removed, textures moved into 'ecw_al_rares.pak'
+• 'al_body_main.pak' has been renamed to 'ecw_al_body.pak'
+• 'al_body_jewel.pak' has been renamed to 'ecw_al_jewels.pak'
+• 'al_body_masks.pak' has been renamed to 'ecw_al_masks.pak'
+• 'ecw_al_rares.pak' added, contains the rare Chao textures and the ECW DC Metals
+
+-- Misc Changes --
+• Edited multisave descr. to match how it currently works
+• Removed config.ini from ChaoWorldDJ
+• Changing Chao Save now makes a noise
+• Chao backup now uses the name of your Chao & their slot, instead of just their slot
+• Removed refrences to Chao Island
+• LandTable names have been changed
+• Splash text now always displays, instead of having a 50% chance
+• 'New Texture Chao' renamed to 'DC Metal Textures', & option removed
+• Icon shadows in 'Better Chao Shadows' are now always enabled
+• 'SADX Running' renamed to 'Force SADX Race Animation'
+• 'Force SADX Race Animation' now only forces SADX animation, instead of either causing it randomly or forcing it.
+• Moved to C++20
+• Better compressed .pak's to reduce the mod's total file size
+• Added a backface to the mountains in the Enhanced Neutral Garden
+• Removed legacy Hyper Chao
+• Moved SOD to the new SECW Menu, & removed config
+• Retired eRand and replaced it with a better Rand function
+• Moved "Gentle Hat Removal" to the SECW Menu, & removed config
+• Splash & important debug text now displays on-screen using SECWMenuDebugDisplay(), instead of hidden within the Debug Console
+• Completely re-wrote 'Autosave' feature, and time left now displays in the SECW Menu
+• ChangeLog.txt is now ordered bottom to top chronologically (Newest at the top)
+• Re-wrote 'Backup' feature, now supports custom directory & default directory is now the Main/Chao Save directory
+• Multisave debug text now displays on-screen using SECWMenuDebugDisplay()
+• 'Switched Focused Chao' can now be controlled via the left analog stick, ZL & ZR, as well as the dpad; it now plays a sound; & will now switch quickly if held down
+• Debug text is now printed while Chao Backups are made
+• Added far more splash text
+• Greatly generally optimized the dll
+• All .sa2mdl's have been moved into the dll
+• Removed 'Lobby Music Setting' option
+• Made a new ALF Save map
+• Waypoints are now internally stored as byte arrays, over int arrays previously
+• Made the button disable code in the Kindergarten far more optimized 
+• Keyboard input is now ignored if game window is not in focus
+• Max garden fruit has been increased to 12 from 10
+• Much of the code used to replace the vanilla gardens has been updated and replaced
+• Renamed adx files
+• Optimized std::map code
+• Began updating RNG process to the 'Chance System' from 'Modulo'
+• Increased Shadow region size in races, this does lower their quality, but you can see then further away!
+• All compatibility settings have been removed, since SECW is most commonly used for these texture mods now anyway
+• Changed how race shadows are hooked
+• Optimization to the Chao detection system (Used to check all 24 Chao every 10 frames, now checks 1 Chao per frame over 24 frames)
+• Renamed 'ChangeLog.txt' to 'change.log'
+
+-- Misc Fixes --
+• Fixed Chao Ball Shadows config including "All toys" option, this was never going to be a feature and has been removed
+• Fixed a char being set to false, and not zero (I know, I'm a hero, no need to thank me)
+• Fixed possible crash with using SADX trees in the Chao Garden
+• Fixed possible issue with backup files being one byte short
+• Fixed Multisave storing ghost key presses, it's not halloween anymore
+• Fixed Backup checking 25 chao slots
+• Functions that are only supposed to run once upon entering Chao World (such as autobackup) were running up to 100 times
+• 'Switch Focused Chao' option now disables itself if 'Chao Race Adventure' is enabled, as the race camera is unused
+• Fixed 'More Chao Anims' missing a break; in the Cymbals switch case
+• Fixed black "halo" around transparant objects in the Hero Garden if the clouds are behind them
+• Fixed 'RNG Fix,' it's unknown how long it wasn't working for, but since 1.3 is probably a good bet... ¯\_(ツ)_/¯
+• Changed how the isKeyPressedSingle(key) function works, now allowing for multiple key checks in sequence without it breaking down
+
+-- Base Game Fixes --
+• Included Knuckles animation fix (for his fucked up foot and knees)
+• The game no longer crashes when too many Chao are present (Exant <3)
+• Fruit no longer age up when you pause
+• Tree growth no longer halves when you enter a garden
+• Chao no longer get perma stuck on garden objects, like the Hero Garden pillars
+• Chao now hold the Crayon toy the correct way around!
+• Animals will no longer get stuck jumping at walls when slightly touching water
+• The halo on the Hero Garden's gate now renders correctly (DC Restoration)
+• Chao shadows now appear in the Chao Lobby
+• The broken round shadow model has been replaced and fixed
+• The grapes model has been restored and fixed
+
+######################## ######################## ######################## ########################
+SECW v1.3.0.1
+
+
+Changelog:
+• Made small wording changes to the config and ChangeLog
+• Chao can now breed infinitely, even if no spaces are there
+• fixed version being 1.3a
+
+######################## ######################## ######################## ########################
+SECW v1.3: Song and Dance Update
+
+
+Changelog:
+• Race Shadows now uses a different, less overbearing, method of restoring the shadows
+• 'The Doctor's Upgrades' has been almost entirely re-written
+• Mouth compatibility option has been changed dramatically
+• Moved from the 'ChaoArray' system, which 1.0, 1.1, & 1.2 were built on, to the more robust 'ChaoArrayV2'
+• Shiny mutation now supports CWE's bright fix, this will make no difference if you don't use CWE
+• Rewrote how the safety net feature works (aka teleporting you if you fall too far)
+• RNG Fix is now optional
+• Void Chao are now enabled by default, replacing the "Unused White" color
+• Breeding mutations got a massive code overhaul
+• Enhanced Transpoter Texlist switching got a code overhaul
+• Inadvertent waypoint changes to all 3 gardens while moving to the new Waypoint system
+• Hero Garden got minor improvements to its waypoints
+• Hats removed using SECW now fly from the Chao, rather than from your character
+• Accidentally broke/fixed Wings Match Chao, they will now dissapear again when given bat parts
+• Race Shadows now support the 'Enhanced Shadows' option added in this update!
+• Removed 'Cap Random Texture' option, as no mods support more textures at this time
+• The way the 'RNG Fix' is used has been changed to be less 'invasive'
+• Moved shadow region fixes for races into the 'General Race Fixes' option
+• You will now be teleported to your Chao at the start of the race when 'Free Roam during Chao Race' is enabled
+• 'Unlockable Character Chao' now has the Chao transform on evolve, rather than garden load, but now no longer works with CWE
+• Remove Garden Cap has been switched to an int, allowing you to set your own limit
+• 'Gentle Mask\Hat Removal' now requires you hold L & R, but now takes only half a second
+• 'Addlist.txt' has been renamed to 'ChangeLog.txt'
+• 'Hyper Chao' now transition smoothly using color invisible 3! You can buy the old method back if your Chao is already hyper!
+• Restored the Hyper Chao speed option from 1.2
+• Rebalanced the Better Chao Fruit & Better Drive options (thank you Darky! <3)
+
+
+Fixlist:
+• Animals in the Animal Race now actually animate with 'Race Shadows' on, rather than sliding around like bad Weeping Angels...
+• 'Enable Hyper Chao' option couldn't be disabled, even if set to 'Off/Disabled', due to a typo
+• 'Disable Chao Spawning' was completely un-operational due to its group not being changed to 'tools'
+• 'Remove Garden Cap' may have not been able to be turned off... I can't confirm this, but it definately can be now
+• Auto-Backup *may* have been unreliable, it now is! It may have been a 1.3 beta bug, but its fixed nontheless
+• Fixed a potential TV crash due to the fixed random
+• Shadows rendered through the ground and ceiling in the races, this has been fixed (Will not work with Chao Race Adventure on)
+• Both depositing eggs and mating now are affected by no garden cap!
+• Mouths will no longer overwrite other mods like CWE's 'HD Chao Textures'
+• Can no longer switch focused Chao during races when paused
+• Fixed the Empty Can lid texture rendered behind the rest of the hat
+• Re-fixed animal textures rendering behind every object
+
+
+Addlist:
+-- Chao World DJ v1.1 --
+Now includes the SA1 Autodemo Chao World music! Which is much funkier than the release version!
+
+-- Enhanced Kindergarten (addition) --
+Now includes a fully graphically fixed Black Market, and an adjusted Health Center!
+
+-- Enhanced SFX Volume --
+I've personally gone through every sound effect and adjusted its volume to restore DC volumes, and to make Chao world a less deafening experience!
+
+-- (Disable) Animal Jump Sound --
+Enables or Disables the sound an animal makes when it jumps
+
+-- Better Chao Shadows --
+Applies shadows to multiple parts of the Chao's body, making them more dynamic and Dreamcast like! Shadows are applied to the head, body, arms, feet, & Icon if enabled!
+
+-- Enhanced Shadows --
+Use basic, distance based math on shadows. Shadows have also been resized to look better and more DC like!
+
+-- Restore Ball Shadows --
+Restores the shadows under the garden beach balls that were lost when the game was ported to GameCube.
+
+-- More Chao Animations --
+Allows Chao to perform more varied animations during gameplay by restoring unused animations!
+
+-- More Chao Sound --
+Allows Chao to make more varied sounds during gameplay by restoring unused Chao voice clips!
+
+-- SADX Running --
+Chao will randomly, or all the time, use the SADX animation during races!
+
+-- Better Mushroom Fruits --
+Increases the points given by the Base/Alt Mushrooms from 12/20 to 42/55, and gives 42/55 to Luck and Intel.
+
+-- Alt. Mushroom Restore --
+Restores the unused red, alternate Mushroom texture! Making the Base and Alt. Mushrooms much easier to tell apart!
+
+-- General Race Fixes --
+Fixes various collision issues and shadow rendering issues in the Races. This may be the first time a mod has changed elements of the geometry in races!
+
+-- Yellow Knuckles Chao Icon --
+Changes the Icon, or emote ball, color of the Knuckles Chao to Yellow from Green. Not only does this match better, it also moves it away from the Tails Chao, which was the exact same Green.
+
+-- Tint Chaos Chao Icons --
+Slightly tints the icon, or emote ball, colors of the Neutral Chaos and Dark Chaos Chao so they aren't pure white, also tints the texture slightly too.
+
+-- Enable Void Chao --
+With this off, Void Chao, or White (UNUSED), will render as a normal white. Useless with CWE Color Comp. on!
+
+-- Un-Cap Shadow Count --
+Caps the shadows back to 255 rather than 64, Enhanced Shadows will break with this off.
+
+-- Restore Unused Chaos Jingles --
+Restores the unused Chaos Chao evolve jingles! In vanilla, only dark is used, but there is a hero one! 
+Neutral has been given the unused 'Garden Unlock' jingle (This option doesn't operate with CWE enabled)
+
+-- Restore Raccoon Tail --
+Restores the unused Raccoon tails. The models exist within the game's code, but no pointers actually lead to them.
+
+-- GCN Chao Font --
+Replaces the font in Chao world with the one from GCN, which also fixes errors with letter spacing
+
+
+-- Patches (Default on)
+• Fixed an odd shadow region inside the Health Center (Enhanced Kindergarten)
+• Fixed many rendering issues inside the Black Market (Enhanced Kindergarten)
+• Shadow cap set from 64 to 255 to allow for Enhanced Shadows without issues with rendering
+• Fixed a broken piece of collision within all 3 race levels (General Race Fixes)
+• Improved shadow regions around the ceremony podium (General Race Fixes)
+• Added geometry to the sides of the starting area in Chao Karate to fix issues with Widescreen & Widerscreen displays (Karate Widescreen Fix)
+
+
+-- Patches (Included)
+• Non-garden trees now scale correctly
+• The Transporter's scrolling background no longer breaks when looping on screens with a res higher than 600p
+• Eggs now have both collision and physics in the Kindergarten
+• Cocoons will no longer periodically turn black
+
+######################## ######################## ######################## ########################
+SECW v1.2.2
+
+Changelog:
+• 'Faster Cocoon Time' is now 'Chao Cocoon Time'
+• Chao Cocoon Time now supports doubling the total cocoon time!
+• Wings match Chao option no longer stops wings from dissapearing with 'bat parts'
+• Removed fake mod telling you to delete Enhanced Gardens (if you haven't, it's your own fault from here on)
+
+Fixlist:
+• The saftey net is no longer overbearing in gardens and the kindergarten, causing you to 'fly'
+• Wings match Chao option no longer crashes with 'bat parts' on a Chao
+• The race menu *should* now no longer break completely when using keyboard prompts
+
+-- Patches (Default on)
+• Better Chaos Drives: Increases the points given by "Chaos Drives" from 24 to 50 points in each stat, and to 40 for Luck and Intel.
+
+######################## ######################## ######################## ########################
+SECW v1.2.1.1
+
+Changelog:
+• Upgrades now play the fail sound if your Chao is incompatible
+
+Fixlist:
+• The Health Center will no longer print "AnyPress" over and over in the console
+• Shiny upgrade now successfully resets itself
+
+######################## ######################## ######################## ########################
+SECW v1.2.1
+
+Changelog:
+• Mutations now use the % method
+• Hyper Chao now cost 30,000 rings to aquire, and 15,000 rings to remove
+• Hyper Chao Speed is now just a Hyper Chao toggle in general
+• Hyper Chao now switch colors every 10 frames, rather than ever 8 frames.
+• Multisave now requires you to hold control to activate at all (So, ctrl + 4 is save 4; ctrl + L.Shift + 4 is save 14)
+• Multisave now no longer supports the old save method at all
+
+Fixlist:
+• Hyper Chao speed's description was fixed... then the option was removed...
+• Jewels can no longer become hyper... since you can't see it... (This does not a apply to shiny Jewels)
+• Sound effects played by SECW are no longer really quiet
+• A function made to detect any button press and return true was bugged, therefore always returning false and making other functions behave weirdly
+• The wait timer for button inputs was bugged, therefore checking your inputs every frame, leaving you a 1/60th of a second window to press and let go of the button
+• The function designed to detect if you were inside the Health Center malfuctioned after entering it, meaning it couldn't detect if you had left
+• The function designed to stop you falling forever was being overbearing in the Lobby
+
+Addlist:
+-- The Doctor's Upgrades --
+Allows you to "Upgrade" your Chao's appearance by taking them to the Health Center and inputting a specific combo. (Dpad: Up, down, up, down, left, right, left, right) to activate upgrade mode.
+When in upgrade mode (Up, up, start) for TT/MT conversion. (Down, down, start) for Shiny conversion. & (B, A, Start) for Hyper Conversion!
+
+-- Lobby Music Setting+ --
+Added 2 new options to this config! An extended version of chao_hall.adx, and an option to force the vanilla GCN track over modded (for CWE users)
+
+-- Patches (Default off)
+• Faster Cocoon Time: Halfs the amount of time a cocoon takes to appear, evolve, and disappear
+• Chao Growth Speed: Allows the natural increase of Magnitude to be increased slightly
+
+######################## ######################## ######################## ########################
+SECW v1.2.0.1
+
+Fixlist:
+• Harder to get Hyper Chao on accident
+
+Addlist:
+-- Hyper Chao Speed --
+Toggle the speed at which Hyper Chao shift colors
+
+######################## ######################## ######################## ########################
+SECW v1.2: Labo(u)r of Love Update
+
+Changelog:
+• Moved the Music settings to a seperate, included mod (ECW: Chao World DJ)
+• All mods included with SECW now have the prefix 'ECW:'
+• Old skip race cutscene code now fully removed
+• Removed "Enable Broken Pillar" in the "Hero Garden" section, now always off
+• Enhanced Chao Garden got landtable tweaks and updates: the extra geometry around the mountain has been removed, mostly because it looked awful...
+• Randomize Egg sets no longer works below 120 (or 170) emblems, but new saves will be given a random set index
+• Mutations now check the Chao's appearance and DNA, and mutate them accordingly
+• Mutations now check for type 0x00
+• SADX trees can now be selected per garden
+• The default, DC Chao mouths have been replaced with mouth textures from SADX, and moved to their own option.
+• Multisave is now operated using the keyboard numbers and shift adding up to 20 saves, the old method still works also.
+• Enhanced Hero Garden got landtable tweaks and updates: The pillars on the structure now being part of the landtable, rather than the objects; the water has switched to Vertex Shading to look more clear and pristine.
+• the Kindergarten Exterior got some landtable tweaks, mostly the window texture changing
+• Added a 'Tools and Utility' section to the config menu
+
+Fixlist:
+• Fixed the ellusive Karate Crash
+• "Disable Swim Spawns" didn't work in the Dark Garden
+• Fixed the 'open smile' texture using the more round DC variant, rather than the SA2B/SADX sharp cornered one
+• Fixed the Mutations description being a duplicate of the DC Jewel Texture desc.
+• Fixed Omochao mouths not appearing for some reason
+• Fixed bubbles showing the incorrect texture
+• Fixed the Kindergarten Exterior having issues with gaps in the mesh
+
+Addlist:
+-- Auto-Backup --
+This option will automatically back up your Chao as .chao, .ChaoSave, or both depending on what you choose when you enter Chao World
+
+-- Green-Screen Garden --
+Replaces the Neutral Garden with a map filled with different colored cubes, for taking screenshots of Chao and Characters
+
+-- Gentle Mask\Hat Removal --
+Allows you to remove Chao Mask\Hats by holding B or X down as you pick them up for 2.5 secs, rather than needing to throw them
+
+-- Unlockable Character Chao --
+Allows you to evolve your Chao into a Character Chao by filling out Chao specific requirements: Having the Chao wear the correct type of egg (Pink for Amy, Yellow for Tails, Red for Knux), 
+giving the Chao all the animals of their type only (Run for Amy, Fly for Tails, etc.), the Chao has over 80 happiness, and the Chao evolves into the correct, Neutral type
+
+-- DC Mouths --
+Uses the SA2 Chao mouths over the SA2B\SADX mouths
+
+-- Use Vertex Colors --
+Allows the vertex colors to be swapped for simple vertex shading for better texture pak support, especially ones that diverge from the default colors
+
+-- DC Transition Woosh --
+Swaps the garden transition woosh sound for the Dreamcast variant.
+
+-- Quick Exit --
+Allows you to quickly exit Chao World without saving by pressing L, R, and Y while paused
+
+-- CWE Color Compatibility --
+Allows non-CWE saves tp see the CWE mix colors!
+
+-- Features (Included)
+• Hyper Chao added, a special breed only obtained via an Easter egg, who will find it first?
+• Other Easter eggs
+• Added a few holiday 'events'
+
+-- Patches (Default on)
+• The "Boing" sound in the kindergarten has been restored from the "Bup" sound that plays in the HD releases for some reason
+
+-- Patches (Default off)
+• Can randomize the egg sets in the BM once to fix previously broken saves. This cannot be abused to get random egg sets early
+
+-- Patches (Included)
+• Your character will be teleported to y 18.0f if you fall below y -52.0f in Chao World
+• The Onyx medal was missing enviroment mapped texture
+
+######################## ######################## ######################## ########################
+SECW v1.1: The Feature and Shine Update:
+
+Changelog:
+• Moved "Kindergarten Always Open" & "Lobby" music setting to the Config's new "Chao Lobby" section
+• Moved "Black Market Restock Time" to Kindergarten section
+• Moved "Remove Garden Cap" to Misc, Fixes, and Patches section
+• Removed "DC Transporter Compatibility" option from "Hero Garden" section, now always on
+• Removed "Secret Spawn" & "Water Fix" option from "Chao Garden Section". Secret Spawn is now always off, and Water Fix is now always on.
+• Merged all "Win Eggs from _ Race" Options into one
+• Metal Egg 1 was moved to mission 8, Metal 2 was moved to mission 10, and glass egg was added to mission 11, with 12 now actually being a moon egg.
+• Autosaves and SODs will wait for the game to unpause
+• Updated the RNG to v2
+• Dark Garden's shadow regions were updated to be more in-line with the other Enhanced Gardens
+• Much of the code was rewritten to be cleaner, more efficient, and less likely to break
+
+Fixlist:
+• Disabling shadows no longer breaks "Better Camera" in CWE (Thanks to Chao Professor for this one!)
+• Shadows in races no longer render in absurd ways
+• Getting a random egg when your Chao garden has 8+ Chao will no longer break the random egg, giving you a normal pearl
+• The game will no longer crash if multiple autosaves/SODs happen while paused
+• Fixed "SADX-like Alignment" being enabled by default, causing it to be impossible to enable as the code did not expect this
+• The button on the Enhanced Transporter will no longer cull out at weird angles
+• Chao can no longer climb the bounding collision in the Dark Garden at one particular point
+• Made "Breeding Mutations" fully compatible with "Color Mixing" in CWE (Thanks to AmberZeChao for this one! <3)
+
+Addlist:
+-- Open Up the Lobby --
+Removes either the roof dome, or both the roof and floor domes making the Lobby feel more spacey! This supports custom textures, 
+but not custom maps
+
+-- Disable Shadows on the (Lobby) Stairs --
+Disables shadows on the magic stairs, making them feel more special and magical, rather than just tinted glass
+
+-- Rendering Model --
+Which version of the lobby should SECW try to emulate. Options are GCN which uses Speeps' Lobby fixes, DC which fixes a 
+rendering error with the lines but causes issues with the stairs, and finally compromise which uses the best of both worlds.
+
+-- Use Library over Fortune Teller --
+Does as the name implies. Has two options: With new texture and without. Made by SPEEPSHighway
+
+-- Switch Camera Focused Chao --
+By enabling this, you can switch which Chao is being focused on in the race by pressing left and right on either the 
+Controller DPad, or A and D on keyboard
+
+-- Disable Race Mini-map --
+Disables the mini-map during Chao races
+
+-- Run Around During Chao Race --
+Spawns the current character into the race, allowing you to follow your Chao, or explore the map!
+
+-- Patches (Default on)
+• Cap Random Texture option added, which caps the max Texture value that can be generated by the Random egg and Mutations
+• Chaos and Character Chao now have their animal parts visible
+
+-- Patches (Included)
+• Many more rendering errors fixed by myself and Speeps:
+	• The gates in the lobby no longer render over each other!
+	• The stone Chao wings on the Hero gate now render correctly!
+	• Magic ball and halos at the top of the Hero gate now render correctly!
+	• The gate glow of the Hero, Chao, Kindergarten, and Exit now render their alpha correctly!
+	• The blush on the fortune teller now renders correctly
+	• Shadows in the Fortune Teller room no longer render above objects
+	• Objects in the Black market now render as close to correctly as possible
+	• The silver cup in the Principles Office now renders correctly
+
+• The backdrop for the Principle's Office now matches the GCN Level
+	
+-- Mods Integrated:
+• Chao Lobby Fixes by SPEEPSHighway
+• Fortune Teller Blush Fix by SPEEPSHighway (Never released)
+• Kindergarten Library by SPEEPSHighway (Never released)
+
+######################## ######################## ######################## ########################
+SECW v1.0: Release
+
+-- Autosaving and Save On Demand --
+Allows for Chao World to save on a cycle and/or saving on demand without having to leave Chao world
+
+-- Multisave --
+Like CWE, each main save gets it's own Chao save; meaning 240 simultaneous Chao without having to swap. CWE Compatibility available
+
+-- Breeding Mutations --
+A newborn Chao has an 8% chance of mutating, leading to an appearance that doesn't match the parents
+
+-- Practically removed egg sets --
+All eggs can be bought on all saves, technically fixing the bug where Yellow, Pink, and Purple wouldn't ever show
+
+-- Enhanced "Enhanced Garden/Kindergarten Series" included! --
+• Improved garden spawn points
+• Improved leveltables
+• Improved waypoints in Chao Garden
+• Improved climbing points in Chao Garden
+
+-- New Paks --
+• al_body_main.pak             = Contains the non-palette Chao textures.
+• al_body_jewel.pak            = Contains all the Jewel Chao textures.
+• al_body_masks.pak            = Contains all the masks textures.
+• al_body_jewel_dc.pak         = Contains the DC Jewel textures.
+• al_body_silver_dc.pak        = Contains only the DC Silver jewel texture.
+• al_mouth_new.pak             = Contains the mouth textures, the same as al_mouth but the global ID's of the toothy smile have been fixed to avoid a bug.
+• al_texturechao_new.pak       = Contains the two new texture Chao.
+• al_transporter_neut.pak      = Contains the Chao transporter textures.
+• al_transporter_hero.pak      = Contains the Hero transporter textures.
+• al_transporter_dark.pak      = Contains the Dark transporter textures.
+• al_tree_sadx.pak             = Contains the textures for the SADX trees.
+
+-- New Texture Chao --
+Textures 5 & 6 have been replaced with textures originally meant for special Chao back on DC!
+
+-- Win Eggs from race --
+It's possible to win Jewel and random texture Chao from select Jewel, Challenge, Hero, and Dark races; random texture Chao affects DNA also
+
+-- Race Shadows --
+Race Chao shadows are re-enabled after they were turned off for the GCN+ ports 
+
+-- Enhanced Transporters & Custom Transporter Support --
+The transporters are by default the SADXHD variant, and each garden uses it's own textures. This also allows for custom transporter mods.
+
+-- GBA Transporters -- (Separate)
+Mod has been upgraded to be compatible with SECW, and comes with it standard.
+
+-- Better Chao Fruit --
+Chao Fruit now give 40 points, rather than 12
+
+-- HD Stagetitles --
+Stagetitles have been wonderfully recreated in HD by AWildDaydreamer in the better looking, GCN style!
+
+-- GCN Stagetitles -- (Separate)
+This mod has been included and now comes standard with SECW
+
+-- DC Textures --
+Many textures moved to the lossless format of pak and replaced by their DC counterparts making Chao World feel less crusty
+
+-- DC Jewel Textures --
+Replaces the available Jewel textures with their DC counterparts
+
+-- Remove Garden Cap --
+Removes the 8 Chao garden cap, can optionally be set to 16
+
+-- SADX Trees --
+SADX Trees replace all other garden trees, but still grow the native fruit
+
+-- Black Market Restock Time --
+Black market now restocks on a constant timer, and can be changed
+
+-- Kindergarten Always open --
+Stops the Kindergarten from being closed before you hatch your first egg.
+
+-- Music swapping --
+Allows for most music in Chao world to be shuffled around to your liking, including SADX Garden Music, and SADX Race Music. DJ Option?
+
+-- SFX Settings --
+Enable or disable garden SFX and the level up jingle
+
+-- Patches (Default on) --
+• Ball collision is now correctly sized
+• Wings now match the color, TT-ness, shiny-ness, and texture of the Chao they are attached to
+• Mean eyes are no longer mandatory for dark Chao
+
+-- Patches (Default off) --
+• Mimic SADX-Like Alignment
+• Allow Chao to climb forever
+• All Garden Fruit are like the bugged Hero Fruit, no mood given
+• Enable Spindash & Somersault
+• Disable Chao Shadows
+• Disabled Chao Spawning in selected, or all gardens
+
+-- Patches (Included) --
+• Jewel egg shell textures display properly (<3 Exant)
+• Pearl, Metal 1 & 2, and Glass all now sell for 8,000 rather than 50 rings
+• Hero Garden fruit now give the correct amount of stamina
+
+-- Mods Integrated:
+• Enhanced Chao Garden
+• Dreamcast Chao Garden Textures (Partially)
+• Enhanced Hero Garden
+• GBA Transporters
+• Shaddatic's Chao Balls Fix
+• Enhanced Kindergarten
+• SADX Transporters
+• Garden SFX Are Stupid
+• Enhanced Dark Garden
+
+######################## ######################## ######################## ########################
+
+SECW Versions ChangeLog: (Only used for 1.3 and before)
+
+-- Dictionary:
+Changelog              =  Features and options that changed from the last update                             (In order of change)
+Fixlist                =  Features and options that had bugs or glitches that have been fixed in this update (In order of change)
+Addlist                =  Features, options, & additions to old features                                     (In order of importance)
+Patches (Default off)  =  Patches/fixes to the original game that are default off                            (In order of change)
+Patches (Default on)   =  Patches/fixes to the original game that are default on                             (In order of change)
+Patches (Included)     =  Patches/fixes to the original game that cannot be disabled                         (In order of change)

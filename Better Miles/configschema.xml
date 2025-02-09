@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+  <Groups>
+    <Group name="General" display="1. General Settings">
+				<Property name="isCustomPhysics" type="bool" defaultvalue="True" display= "Allow Custom Physics">
+		<HelpText>Improve Tails physics so he can move faster. Disable this option if you crash on startup.</HelpText>
+		</Property>
+
+		<Property name="isCustomAnim" type="bool" defaultvalue="True" display= "Allow Custom Animations">
+		<HelpText>Add custom animations (Spin Attack, victory pose...) Disable this if you experiment crash.</HelpText>
+		</Property>
+
+			<Property name="isMechRemoved" type="bool" defaultvalue="True" display= "Disable Mech in stages">
+		<HelpText>When enabled, Tails mechless will spawn during Tails Mech stages. (Some exceptions will apply, such as Bosses.)</HelpText>
+		</Property>
+				<Property name="isJumpBall" type="bool" defaultvalue="True" display= "Allow Jump Ball">
+		<HelpText>Bring back Tails's jump ball from SA1!</HelpText>
+		</Property>
+
+			<Property name="isMilesAdventure" type="bool" defaultvalue="False" display= "Miles Adventure 2 Battle">
+		<HelpText>[Experimental] Turn this on to ALWAYS play Tails. Somethin' buggin' you? (Some exceptions will apply.)</HelpText>
+		</Property>
+		
+    </Group>
+		 <Group name="Abilities" display="2. Abilities">
+      <Property name="isInfiniteFly" type="bool" defaultvalue="False" display= "Infinite Flight">
+        <HelpText>Miles will not get tired when flying.</HelpText>
+		</Property>
+		      <Property name="isLightDash" type="bool" defaultvalue="True" display= "Light Dash">
+        <HelpText>Allow Tails to Light Dash.</HelpText>
+		</Property>
+		<Property name="isBounce" type="bool" defaultvalue="True" display= "Bounce">
+        <HelpText>Allow Miles to Bounce.</HelpText>
+		</Property>
+		<Property name="tornadoConfig" type="bool" defaultvalue="True" display= "Call Tornado">
+		<HelpText>Press UP with the d-pad to call the Tornado in real time. Do it again to swap to its mech version.</HelpText>
+		</Property>
+		
+	</Group>
+	
+
+		 <Group name="pad" display="3. Input">
+				<Property name="RollBtn" type="Buttons" defaultvalue="0" display= "Roll Button">
+		<HelpText>Set the button for rolling.</HelpText>
+		</Property>
+		
+			<Property name="BounceBtn" type="Buttons" defaultvalue="0" display= "Bounce button">
+		<HelpText>Set the button for bouncing.</HelpText>
+		</Property>
+		
+					<Property name="SpinBtn" type="Buttons" defaultvalue="1" display= "Spin Attack button">
+		<HelpText>Set the button for spinning.</HelpText>
+		</Property>
+		
+	<Property name="LightDashBtn" type="Buttons" defaultvalue="2" display= "Light Dash button">
+		<HelpText>Set the button for Light Dash.</HelpText>
+		</Property>
+
+		
+		
+	</Group>
+	 <Group name="Audio" display="4. Audio Settings">
+	 	  <Property name="tornadoMusic" type="bool" defaultvalue="True" display="Play Tornado Music">
+        <HelpText>Bring some hype when you call or transform the Tornado!</HelpText>
+		</Property>
+	  <Property name="flySoundEffect" type="bool" defaultvalue="True" display="Fly Sound Effect">
+        <HelpText>Allow the flying sound effect.</HelpText>
+		</Property>
+		<Property name="jumpVoice" type="bool" defaultvalue="False" display="Allow Jump Voice">
+        <HelpText>Allow Tails Voice when jumping.</HelpText>
+		</Property>
+			  <Property name="sfxVol" type="int" defaultvalue="50" display="Custom SFX Volume">
+        <HelpText>Set the volume of the custom sounds effects. (max 100)</HelpText>
+		</Property>
+			<Property name="voiceVol" type="int" defaultvalue="50" display="Custom Voice Volume">
+        <HelpText>Set the volume of the custom voices. (max 100)</HelpText>
+		</Property>
+	</Group>
+
+  </Groups>
+  
+    
+   <Enums>
+    <Enum name="Buttons">
+      <EnumMember name="0" display="B / Circle" />
+      <EnumMember name="1" display="X / Square" />
+      <EnumMember name="2" display="Y / Triangle" />
+    </Enum>
+	</Enums>
+  
+</ConfigSchema>

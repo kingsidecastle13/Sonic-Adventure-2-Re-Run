@@ -1,0 +1,43 @@
+==Version 1.1==
++ Auto-Update because I'm stupid
+- Config now includes "Custom". Select these if you're using a texture that this causes conflicts with. Certain "Vanilla" settings have been renamed to "Vanilla/Custom" because neither change sprite data or the file read.
+- New Logo graphics by End User: English SA2B/Japanese SA2.
+
+==Version 1.0==
++ Now loads a dll to support automatic and user configuration.
++ The Japanese logo vector from Greg2k, edited for color accuracy.
++ SA2B graphics.
++ Added optional fonts, check readme in the fonts folder for more info.
++ Emblem Results character icons
+- Title Screen and File Select now only need one file for all languages.
+- Artefact removal for black outlines. (Cause was nearby A0 pixels being white)
+- Better alignment for kart/scene select icons
+
+Adds config options for the following elements. By default, they're automatically chosen based on whether the DLC (or NoBattle) is active.
+- Title Text (SA2, SA2B, SA2PC and SA2B ('2012' added)
+- Button Prompts (DC, GC, PC Vanilla)
+- Life Icons (Original, GC 1ups, PC Vanilla)
+- Item Boxes (DC, GC, PC)
+- Kart Icons (DC, DC Life Icons, GC)
+- Options: Rumble (DC/GC/360) / Speakers (DC/GC) / File Select Icons (DC/GC/360)
+
+Life Icon tweaks:
+- Reduced Eggman's from 3x to 2x due to scaling issues.
+- Removed mipmaps because it made them blurrier.
+- Tweaked DC Shadow and Rouge's eyes. (Also applied to the 1up box)
+
+==Version 0.3==
++ basically a lot
+
+==Version 0.2==
++ Added Stage Select map
+
+== Version 0.1==
++ Story Select graphics
+
+--
+
+Credits:
+End User - Various Graphics/Testing
+Windii - File/Stage Select Character Icons
+Original HD GUI - Certain Item Box icons (Speed Shoes etc.)

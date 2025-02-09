@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="General" display="General">
+			<Property name="TitleStyle" display="Title Screen Text Style" type="TitleTextStyle" defaultvalue="Auto">
+				<HelpText>Choose a style for "Press START" and the copyright text on the title screen. By default SA2 or SA2B is chosen depending the menu you're using. NOTE: "Custom" will disable all menu-related code, including the logo.</HelpText>
+			</Property>	
+			<Property name="ButtonStyle" display="Button Prompt Style" type="ButtonPromptStyle" defaultvalue="Auto">
+				<HelpText>Choose a style for the B-button prompt. By default DC or GC is chosen depending the menu you're using.</HelpText>
+			</Property>	
+			<Property name="LifeStyle" display="Life Icon Style" type="LifeIconStyle" defaultvalue="Original">
+				<HelpText>Choose a style for life icons. "GameCube (Custom)" uses ones based on the GC 1ups. By default original is chosen.</HelpText>
+			</Property>	
+			<Property name="ItemStyle" display="Item Box Style" type="ItemBoxStyle" defaultvalue="Auto">
+				<HelpText>Choose a style for item box icons. By default DC or GC is chosen depending the menu you're using.</HelpText>
+			</Property>	
+			<Property name="KartStyle" display="Kart Icon Style" type="KartIconStyle" defaultvalue="Auto">
+				<HelpText>Choose a style for kart race icons. By default DC or GC is chosen depending the menu you're using.</HelpText>
+			</Property>	
+		</Group>
+		<Group name="Options" display="Options Menu">
+			<Property name="OptionsCompat" display="Compatibility Mode" type="bool" defaultvalue="False">
+				<HelpText>Disables the custom texture positioning. Enable this if you're using a mod with its own options.pak to avoid conflict. Otherwise, leave this alone or it'll just give your menu squashed icons.</HelpText>
+			</Property>	
+			<Property name="RumbleStyle" display="Rumble Icon" type="Rumble" defaultvalue="Auto">
+				<HelpText>Choose the icon for the Rumble setting in the Options menu.</HelpText>
+			</Property>	
+			<Property name="SpeakerStyle" display="Speaker Icon" type="Speaker" defaultvalue="Auto">
+				<HelpText>Choose the icon for the Stereo/Mono setting for the Options menu.</HelpText>
+			</Property>	
+			<Property name="MemcardStyle" display="Memory Card Icon" type="Memcard" defaultvalue="Auto">
+				<HelpText>Choose the icon for File Select in the Options menu.</HelpText>
+			</Property>	
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name = "TitleTextStyle">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "SA2" />
+			<EnumMember name = "SA2B" />
+			<EnumMember name = "SA2B ('2012' added)" />
+			<EnumMember name = "SA2PC Vanilla" />
+			<EnumMember name = "Custom" />
+		</Enum>
+		<Enum name = "ButtonPromptStyle">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "GameCube" />
+			<EnumMember name = "Vanilla+Custom" />
+		</Enum>
+		<Enum name = "LifeIconStyle">
+			<EnumMember name = "Original" />
+			<EnumMember name = "GameCube 1up Icons" />
+			<EnumMember name = "Vanilla+Custom" />
+		</Enum>
+		<Enum name = "ItemBoxStyle">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "GameCube" />
+			<EnumMember name = "Vanilla+Custom" />
+		</Enum>
+		<Enum name = "KartIconStyle">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "Dreamcast Life Icons" />
+			<EnumMember name = "GameCube" />
+			<EnumMember name = "Custom" />
+		</Enum>
+		<Enum name = "Rumble">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "GameCube" />
+			<EnumMember name = "Xbox 360" />
+		</Enum>
+		<Enum name = "Speaker">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "GameCube" />
+		</Enum>
+		<Enum name = "Memcard">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "GameCube" />
+			<EnumMember name = "Xbox 360" />
+		</Enum>
+	</Enums>
+</ConfigSchema>

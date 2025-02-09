@@ -1,0 +1,5 @@
+At the moment, fonts aren't fully implemented because we need to figure out how to load it from a mod properly (The font loads before the mod loader does). 
+At the moment if it's in a mod folder it'll only affect some text in Chao World.
+
+If you want to replace all the text, drop it directly into resource/gd_PC. 
+efmsgfont_ascii24S_BACKUP contains the original font in case you want to restore it.

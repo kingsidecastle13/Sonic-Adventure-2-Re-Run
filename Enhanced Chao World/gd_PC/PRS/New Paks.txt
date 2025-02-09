@@ -1,0 +1,23 @@
+*ecw_tex.pak				  = Contains more generic textures for ECW to function
+
+*ecw_al_body.pak              = Contains the non-palette Chao textures.
+*ecw_al_jewels.pak            = Contains all the Jewel Chao textures.
+*ecw_al_masks.pak             = Contains all the masks textures.
+*ecw_al_rares.pak             = Contains all the rare chao textures, including the DC Metals
+
+*ecw_dark_obj_tex.pak         = Contains the textures for the dark garden cauldron and graffiti
+
+*ecw_stg_lobby_tex.pak        = Contains the textures for the Enhanced Chao Lobby
+
+*ecw_debug_tex.pak            = Contains debug textures, and the textures for the cube garden (green-screen garden)
+
+*ecw_transporter_neut.pak     = Contains the Chao transporter textures.
+*ecw_transporter_hero.pak     = Contains the Hero transporter textures.
+*ecw_transporter_dark.pak     = Contains the Dark transporter textures.
+*ecw_transporter_gba.pak      = Contains the GBA transporter textures.
+
+*ecw_tree_dark_dc.pak         = Contains the textures for the DC Dark Garden trees.
+*ecw_tree_hero_dc.pak         = Contains the textures for the DC Hero Garden trees.
+*ecw_tree_neut_dc.pak         = Contains the textures for the DC Chao Garden trees.
+*ecw_tree_sadc.pak            = Contains the textures for the SA1 trees.
+*ecw_tree_sadx.pak            = Contains the textures for the SADX trees.

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Sonic" display="1 - Sonic">
+			<Property name="DisableLightShoes" display="Disable Light Shoes" type="bool" defaultvalue="True" />
+			<Property name="DisableMagicGloves" display="Disable Magic Gloves" type="bool" defaultvalue="True" />
+			<Property name="DisableFlameRing" display="Disable Flame Ring" type="bool" defaultvalue="True" />
+			<Property name="DisableBounceBracelet" display="Disable Bounce Bracelet" type="bool" defaultvalue="True" />
+		</Group>
+		<Group name="Tails" display="2 - Tails">
+			<Property name="DisableBooster" display="Disable Booster" type="bool" defaultvalue="True" />
+			<Property name="DisableBazooka" display="Disable Bazooka" type="bool" defaultvalue="True" />
+			<Property name="DisableLaserBlaster" display="Disable Laser Blaster" type="bool" defaultvalue="True" />
+		</Group>
+		<Group name="Knuckles" display="3 - Knuckles">
+			<Property name="DisableShovelClaw" display="Disable Shovel Claw" type="bool" defaultvalue="True" />
+			<Property name="DisableSunglasses" display="Disable Sunglasses" type="bool" defaultvalue="True" />
+			<Property name="DisableHammerGloves" display="Disable Hammer Gloves" type="bool" defaultvalue="True" />
+			<Property name="DisableAirNecklace" display="Disable Air Necklace" type="bool" defaultvalue="True" />
+		</Group>
+		<Group name="Shadow" display="4 - Shadow">
+			<Property name="DisableAirShoes" display="Disable Air Shoes" type="bool" defaultvalue="True" />
+			<Property name="DisableFlameRing" display="Disable Flame Ring" type="bool" defaultvalue="True" />
+		</Group>
+		<Group name="Eggman" display="5 - Eggman">
+			<Property name="DisableJetEngine" display="Disable Jet Engine" type="bool" defaultvalue="True" />
+			<Property name="DisableLargeCannon" display="Disable Large Cannon" type="bool" defaultvalue="True" />
+			<Property name="DisableLaserBlaster" display="Disable Laser Blaster" type="bool" defaultvalue="True" />
+			<Property name="DisableProtectiveArmor" display="Disable Protective Armor" type="bool" defaultvalue="True" />
+		</Group>
+		<Group name="Rouge" display="6 - Rouge">
+			<Property name="DisablePickNails" display="Disable Pick Nails" type="bool" defaultvalue="True" />
+			<Property name="DisableTreasureScope" display="Disable Treasure Scope" type="bool" defaultvalue="True" />
+			<Property name="DisableIronBoots" display="Disable Iron Boots" type="bool" defaultvalue="True" />
+		</Group>
+	</Groups>
+</ConfigSchema>

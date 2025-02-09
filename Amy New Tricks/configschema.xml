@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+  <Groups>
+    <Group name="General" display="1. General Settings">
+				<Property name="grunt" type="bool" defaultvalue="False" display= "Allow Amy grunt">
+		<HelpText>Use amy grunt sound when homing attack.</HelpText>
+		</Property>
+		
+			<Property name="bird" type="BirdSettings"  display= "Allow Bird" defaultvalue="3">
+		<HelpText>Allow Amy to have her cool bird following her, she can have the Blue one or the Gamma one. (Random will give you one of them when entering a stage.)</HelpText>
+		</Property>
+		
+					<Property name="amyAdventure" type="bool"  display= "Amy Adventure 2 Battle" defaultvalue="False">
+		<HelpText>[Experimental] Turn this on to ALWAYS play Amy. Have no fear, Amy Rose is here. (Some exceptions may apply.)</HelpText>
+		</Property>
+		
+			<Property name="hammerRotFix" type="bool"  display= "Hammer Rotation Fix" defaultvalue="False">
+		<HelpText>The SA1 Hammer model hierarchy is different and require a rotation fix, some Amy skins might need it as well so this option is here just in case. (if unsure, leave this to false)</HelpText>
+		</Property>
+
+
+    </Group>
+	
+	<Group name="Abilities">
+			
+		
+			  <Property name="HammerJumpButton" type="Buttons" defaultvalue="2" display="Hammer Jump">
+        <HelpText>Press the specified button while running to do a Hammer Jump.</HelpText>
+      </Property>
+	  
+	  	<Property name="HammerAttackButton" type="Buttons" defaultvalue="512" display="Hammer Attack and Spin">
+        <HelpText>Press the specified button to attack with the hammer.</HelpText>
+      </Property>
+	  
+	  	  	<Property name="HammerAirButton" type="Buttons" defaultvalue="512" display="Hammer Air Attack">
+        <HelpText>Press the specified button while in the air to attack with the hammer.</HelpText>
+      </Property>
+
+	  <Property name="HammerPropButton" type="Buttons" defaultvalue="1024" display="Hammer Propeller">
+        <HelpText>Hold the specified button while in air to do the Hammer Propeller.</HelpText>
+      </Property>
+
+ 
+    </Group>
+
+  </Groups>
+  
+  <Enums>
+		<Enum name = "BirdSettings">
+		     <EnumMember name="0" display="None" />
+			<EnumMember name="1" display="Blue Bird" />
+			<EnumMember name="2" display="Gamma Bird" />
+			<EnumMember name="3" display="Random" />
+		</Enum>
+		
+    <Enum name="Buttons">
+      <EnumMember name="0" display="Disabled" />
+      <EnumMember name="512" display="Y Button" />
+      <EnumMember name="2" display="B Button" />
+      <EnumMember name="1024" display="X Button" />
+    </Enum>
+
+	</Enums>
+</ConfigSchema>

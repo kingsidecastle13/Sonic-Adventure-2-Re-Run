@@ -1,0 +1,209 @@
+v1.1
+Extensions are now accessed via the main mod's config. If you still have the separate extension mods, delete them.
++ Trial Shoes Super Sonic
++ Video Effects now correctly work in both 16:9 and 4:3.
+
+Added optional E0000 configs:
+- GC animations
+- The Trial audio
+
+-------------------
+v1.0
+General
+-All cutscenes are now in 16:9.
+-Material colors have been removed from all (non-geometry) models to fix tinting issues.
+-All scenes have a proper rendering order for effects.
+-Light sets and visual effect data (E0XXX_0) have been tweaked to resemble the DC version more. All additional sets (that cause errors in the PC version) have been removed.
+-Some of the dialogue has been re-timed to fix issues with characters talking over each other.
+-All Chaos Emeralds have been made opaque due to issues with self-blending.
+-Sound effects have been re-synced where necessary.
+-Music volume is reduced so voices can be heard better. (Credit: RusGG)
+-Higher quality textures for all scenes. 
+	NOTE: Texture quality in SA2 is inconsistent. Most large scenes have extra compression on their textures so copying in the DC event's version isn't enough. The highest quality version of a texture is often found in one of 3 places:
+		o Stages (LANDTEX/OBJTEX. Eg: Prison Lane)
+		o Small Events (Particularly for characters, since their gameplay textures are low quality)
+		o SA2B (Some larger (128x128+) textures are higher quality in the ports, such as the Chao in Space billboard)
+	ARK scenes
+		o Research Lab now uses a similar mesh to the Hero Ending: The glass floor and windows are clearly defined, its vertex colors were changed to match the more common model.
+		o Implemented a new skybox for the Research Lab to hide cut off from certain angles.
+		o Restored the screen elements in the Central Control Room, they no longer use videos.
+		o The Central control room's machine has had its inner light split off so it could appear properly.
+		o Fixed the vertex lighting and a missing texture on the walkway in the Central Control Room.
+		o Implemented the Dreamcast planet model. Its texture was edited to remove artifacts that caused problems with its background.
+		o Maria's eyelashes are now visible.
+		o Lighting in shots with Maria has been adjusted to mimic her skin's DC look.
+		o Emeralds in the Central Control Room have been replaced with their DC models for consistency purposes.
+	Characters
+		o All character body models have been replaced with their DC counterparts. This is notable in their eyes, which are smaller, have transparent outlines and a consistent direction.
+		o Fixed markings on Mechs.
+		o Amy and Knuckles have had every piece of their models replaced due to various issues including animations, shape morphs, UV mapping and vertex colors.
+		o Restored a missing effect around Mech Eggman's Laser Blaster.
+		o Fixed an issue with Rouge's Iron Boots missing a texture.
+		o Replaced Sonic's upgrades due to a missing effect on the bounce bracelet.
+		o Fixed all layering issues with Super Sonic and Super Shadow's markings.
+		o Sonic's mouth uses a custom texture (in unused slots) to cover for his DC mouth's shininess until specular lighting is fixed.
+		o The texture for Eggman's glasses has been flipped and darkened 30%, making them look identical to the DC version in-game. 
+	
+Scene-specific changes:
+Hero Story
+-E0000: 
+	o Most geometry replaced to fix vertex lighting and (in some cases) missing textures used for shading.
+	o Clouds replaced with the DC version's (larger).
+	o A white screen effect was added near the end to simulate the second flash.
+		(The lens flare effect can't be fixed now as it's a problem with its code rather than this scene.)
+	o Markings on the helicopter are more visible.
+	o Re-added the helicopter rotor to a shot it was missing in.
+	o The Camera and Sonic use DC Animations.
+	o Adjusted Sonic's hands in the first shot to prevent his wrists showing through them. This happens because the DC model used there (Regular shoes) has shorter arms.
+	o Window frames are no longer black.
+	o Adjusted e0000004000.mid for the timing differences in the first shot.
+-E0002: 
+	o Markings on GUN machines display correctly. 
+	o The soldiers' pants are no longer transparent, which caused them to layer over each other incorrectly.
+	o DC-Style zoom for the Chaos Control animation.
+	o Implemented DC animations for Shadow's right hand and the Emerald, necessary as the hand is incompatible with the GC ones.
+	o Re-added DC morphs to Sonic's hands in three shots missing them. Fixed distortions in one shot.
+	o Fixed a broken light effect when Shadow leaves.
+-E0003:
+	o Fixed Flying Eggman's missing glass, but it's opaque due to transparency issues.
+-E0004:
+	o Re-implemented the plane's shadow.
+-E0005:
+	o Fixed an untextured door that was visible behind Eggman.
+-E0011:
+	o E0122's Sky Rail map is no longer in the background, visible in 16:9.
+	o Made the shadows of buildings in front of everyone use the DC version's texture.
+	o Vertex light fixes: Geometry.
+	o The police siren isn't as high-pitched anymore.
+-E0014: 
+	o Geometry replaced to fix vertex lighting and missing trees. 
+	o A broken booster effect given to Tails in the ports was removed.
+	o Uses the DC version's camera for the last shot, though the range of the zoom out has been reduced to prevent cutoff geometry in 16:9.
+	o Fixed the shadow for Tails.
+-E0015: 
+	o Fixed the same transparency issue with GUN soldiers' pants as E0002.
+	o Vertex light fixes: Geometry.
+	o All shadows work correctly, done by rearranging the entity order. 
+	o Fixed a transparency issue with two trees in the first shot.
+	o Eggman's video is no longer flipped.
+	o The limo's furniture is no longer transparent, which caused multiple layering issues and being able to see through it in general.
+	o The back window of the limo displays correctly.
+	o Replaced the President and adjusted his color to match the original better.
+-E0017: 
+	o Geometry replaced to fix the neon signs.
+	o The shot of Sonic giving a thumbs up has been replaced with the DC version's.
+-E0019:
+	o Uses a new light for the first shot that mimics how Knuckles' head looks in the DC version.
+-E0021:
+	o Moved the last camera a bit so Sonic and Tails don't stop in 16:9.
+-E0022: 
+	o Sonic's left hand is no longer missing in the second shot.
+-E0024: 
+	o Removed the incomplete background model that shows up at the beginning. (It's supposed to be transparent and scroll above the existing one like in gameplay, but here it stops working after a few shots and is solid)
+-E0025: 
+	o Uses Dark story's (E0128) lighting for two shots to cover for a missing effect making Eggman darker than he should be.
+	o Fixed the scope on Eggman's gun. 
+	o Fixed the transparency issues with Sonic's capsule.
+	o DC animations/camera for Sonic's "Two birds" line.
+	o Recreated the DC camera for Tails nodding at Sonic. (The original was changed because it was below the floor and relied on the DC version's culling.)
+	o The planet model seen when Sonic gets ejected now displays correctly.
+-E0028:
+	o Fixed missing pieces of geometry.
+	o Re-implemented shadows.
+	
+Dark Story
+-E0100: 
+	NOTE - This scene is affected by a bug that causes DC assets to show up fully black, so DC geometry here is out of the question until this is fixed.
+	o The floor, doors and background have been tinted to mimic the original game's lighting.
+	o Replaced the red screen effects with black ones from the DC version.
+	o Implemented light animations.
+-E0101: 
+	o The giant door's lights display correctly, via splitting off from the main mesh.
+	o Raised the silhouette of Shadow on the ceiling to take care of an issue where the screen gets tinted black from the camera flying behind it.
+	o The sphere in the capsule's console has been made opaque due to issues with self-blending.
+	o Vertex light fixes: Shadow's capsule.
+-E0103:
+	---> See E0003
+-E0105: 
+	o Eggman's computer monitor is now opaque, improving visibility for the video feed.
+	o Eggman's monitor is darker to resemble the DC version's.
+	o Fixed the lighting on Eggman when he turns on his computer.
+	o The door behind Eggman now ignores lighting just like it does in the DC version, preventing it from being affected by the computer's light effects.
+-E0106:
+	o The hallway has new vertex colors. Attempting to port the original model gives the same issue as geometry in E0000.
+	o Removed an (apparently leftover) off-screen flashing light that caused issues with Maria's first shot.
+	o The gunshot was made louder.
+	o Fixed the siren sound stuttering at the beginning.
+-E0107:
+	o Vertex light fixes: Geometry.
+	---> See E0002
+-E0109: 
+	o The computer monitor no longer clips through Rouge's head when she's examining its contents.
+-E0113:
+	o Fixed a typo in Eggman's dialogue.
+-E0116:
+	o The Egg BomBom dynamite pack now renders correctly
+	o The three Chaos Emeralds were re-implemented to appear alongside Rouge
+	o Vertex light fixes: Geometry behind Rouge.
+	o Restored backgrounds behind Shadow that hide black voids.
+	o Fixed transparency issues with the foliage. NOTE: Some can't be fixed due to self-blending.
+	o Implemented the DC version's camera for the last shot.
+	o English Shadow no longer talks over himself in this scene.
+-E0118: 
+	o The dynamite pack issue was fixed here, as well.
+	o Plants layered correctly.
+-E0119:
+	o NOTE: This scene doesn't have the defined windows due to it interfering with multiple shots.
+	o Sounds for footsteps and the door opening were restored.
+-E0122:
+	o Replaced the (Sky Rail) skybox with the DC version's.
+-E0124: 
+	o Chaos Emeralds were added to the Eclipse Cannon.
+-E0126:
+	---> See E0024
+-E0127: 
+	o Eggman's monitor no longer pulls up the Team Sonic image twice. 
+	o The map detailing the locations of the two Chaos Emeralds was edited.
+-E0128:
+	---> See E0025
+-E0129: 
+	o The Earth and the window in Shadow's scene now appear.
+	o A black plane was added to prevent the space skybox being visible from the Central Control Room.
+	o Vertex light fixes: Geometry.
+-E0131: 
+	o The last Chaos Emerald was replaced with its DC version to bypass an error with the SA2B emerald appearing black after alterations were made.
+	o Vertex light fixes: Geometry.
+	
+Last Story
+-E0201:
+	o Vertex light fixes: Sonic's hands
+-E0203:
+	o Fixed light animations on the walls in the background.
+	o Fixed a typo in Eggman's dialogue.
+-E0204:
+	o Vertex light fixes: Geometry.
+-E0205:
+	o Fixed minor issue with one of the biolizard's light effects.
+	o Fixed water animation.
+	o Adjusted animations for the third shot of Sonic and Knuckles to account for 16:9.
+-E0208:
+	o Fixed the light effects behind Sonic and Shadow and scaled them for 16:9.
+	o Fixed transparent lights on the ARK.
+	o Adjusted the effects on the sphere surrounding the ARK to resemble DC more.
+-E0210:
+	o Fixed the skybox during the credits.
+	o Layered the planet correctly during the credits.
+
+Other
+-E0350 (DC Intro)
+	o Fixed up and implemented for the non-dlc opening. WIP due to missing the metallic fade (the way the DC version handled it is missing). If you prefer the video, you can disable this in config.
+	o Uses DC animations as the vanilla PC one is broken.
+	
+-E0360/E0361 (Battle Intro)
+	o Sonic and Shadow now use the same mouth models as other cutscenes.
+	o Fixed Sonic's background not appearing in either version.
+	o Fixed Shadow's background being incorrect in the English version (E0361).
+	o Now uses the Sand Ocean moon, previously in the texture list but unused.
+	o Adjusted the black on the logo to be more accurate to the graphic.
+	o The mini-background at the end now fills the screen in 16:9.
+	o The correct video effect file is now selected independent of the current text language. Previously, languages other than English would use the Japanese one.

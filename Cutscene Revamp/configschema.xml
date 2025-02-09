@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Options" display="Customization Options">
+			<Property name="EnableDCIntro" display="Enable DC Intro" type="bool" defaultvalue="True">	
+				<HelpText>Replaces the opening sequence with the Dreamcast version's. A work-in-progress for now.</HelpText>
+			</Property>
+			<Property name="Force169" display="16:9 Cutscenes" type="bool" defaultvalue="True">	
+				<HelpText>Removes the black bars that simulate a 4:3 aspect ratio in certain scenes.</HelpText>
+			</Property>
+			<Property name="SA2BAnims" display="SA2B Hero Intro Animations" type="bool" defaultvalue="False">	
+				<HelpText>Reverts Sonic's movements and the camera angles used in the first shot of the Hero Story intro to the SA2B versions.</HelpText>
+			</Property>
+			<Property name="TrialAudio" display="Hero Intro Alternate Audio Timing" type="bool" defaultvalue="False">	
+				<HelpText>Enable this to utilize the shortened version of the Hero Intro theme heard in SA2: The Trial.</HelpText>
+			</Property>			
+			<Property name="TrialSonic" display="Enable Trial Sonic in Cutscenes" type="bool" defaultvalue="False">	
+				<HelpText>Sonic wears his classic shoes in all scenes. Can be combined with "Enable Amy's Eyeliner".</HelpText>
+			</Property>
+			<Property name="AmyEyeliner" display="Enable Amy's Eyeliner" type="bool" defaultvalue="False">	
+				<HelpText>Amy applies makeup for all of her scenes. Can be combined with "Enable Trial Sonic in Cutscenes".</HelpText>
+			</Property>
+		</Group>
+	</Groups>
+</ConfigSchema>

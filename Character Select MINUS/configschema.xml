@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="">
+			<Property name="Non Speed Characters" type="NSpeed" defaultvalue="None">
+				<HelpText>Adds more character options to Speed stages. (Mechless Characters = Tails and Eggman)</HelpText>
+			</Property>
+			<Property name="Mission Requirement" type="ARank" defaultvalue="All Five Missions">
+				<HelpText>Configure how many missions you need to complete to unlock the character menu for the selected stage. (and if you need to A rank them or not)</HelpText>
+			</Property>
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name="ARank">
+		  <EnumMember name="All Five Missions [A Rank]" />
+		  <EnumMember name="All Five Missions [Any Rank]" />
+		  <EnumMember name="Only Selected Mission [A Rank]" />
+		  <EnumMember name="Only Selected Mission [Any Rank]" />
+		  <EnumMember name="None" />
+		</Enum>
+		<Enum name="NSpeed">
+		  <EnumMember name="Treasure Hunters and Mechless Characters" />
+		  <EnumMember name="Knuckles, Rouge, and Mechless Characters" />
+		  <EnumMember name="Treasure Hunters" />
+		  <EnumMember name="None" />
+		</Enum>
+	</Enums>
+</ConfigSchema>

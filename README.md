@@ -1,4 +1,4 @@
-Thank you for downloading King's Sonic Adventure 2 Pack
+Thank you for downloading King's Sonic Adventure 2 Re-Run Pack
 
 This is a pretty big mod list, with over 300 different modifications made to the game in some way. The goal is to create a blend between two mantras:
 "What would Sonic Adventure 2 look like if it were still receiving updates and DLC today?"

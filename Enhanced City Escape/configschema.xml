@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="gMAIN" display="-- Enhanced City Escape Settings">
+			<Property name="pMUSIC" display="Music Type" type="eMUSIC" defaultvalue="1">
+				<HelpText>Which version of 'Escape from the City' will play.</HelpText>
+			</Property>
+			<Property name="pSET" display="Object Layout" type="eSETS" defaultvalue="2">
+				<HelpText>Which set file should be used.</HelpText>
+			</Property>
+			<Property name="pFOG" display="Fog Type" type="eFOG" defaultvalue="2">
+				<HelpText>Whether the restored fog should be used.</HelpText>
+			</Property>
+			<Property name="pADS" display="Poster Textures" type="eADS" defaultvalue="4">
+				<HelpText>Which version of the ads should be used. 'Enhanced' is my personal mix!</HelpText>
+			</Property>
+			<Property name="pSIGN" display="WELCOME Sign" type="eBOOL" defaultvalue="1">
+				<HelpText>Whether the large 'WELCOME' sign from Dreamcast should be displayed!</HelpText>
+			</Property>
+		</Group>
+		<Group name="gJFF" display="-- Just for Fun">
+			<Property name="pSHM" display="Silent Hill Mode" type="eBOOL" defaultvalue="0">
+				<HelpText>Makes the fog extremely dense, almost like playing blindfolded.</HelpText>
+			</Property>
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name="eBOOL">
+			<EnumMember name="1" display="Enabled"></EnumMember>
+			<EnumMember name="0" display="Off/Disabled"></EnumMember>
+		</Enum>
+		<Enum name="eMUSIC">
+			<EnumMember name="1" display="Vanilla"></EnumMember>
+			<EnumMember name="0" display="The Trial"></EnumMember>
+		</Enum>
+		<Enum name="eSETS">
+			<EnumMember name="2" display="GameCube"></EnumMember>
+			<EnumMember name="1" display="Dreamcast +Hardmode"></EnumMember>
+			<EnumMember name="0" display="Dreamcast"></EnumMember>
+		</Enum>
+		<Enum name="eFOG">
+			<EnumMember name="2" display="DC Fog"></EnumMember>
+			<EnumMember name="1" display="DC Fog w/o Sky fix"></EnumMember>
+			<EnumMember name="0" display="Vanilla (Off)"></EnumMember>
+		</Enum>
+		<Enum name="eADS">
+			<EnumMember name="4" display="Enhanced"></EnumMember>
+			<EnumMember name="3" display="Enhanced w Soap"></EnumMember>
+			<EnumMember name="2" display="PC Vanilla"></EnumMember>
+			<EnumMember name="1" display="GameCube"></EnumMember>
+			<EnumMember name="0" display="Dreamcast"></EnumMember>
+		</Enum>
+  </Enums>
+</ConfigSchema>

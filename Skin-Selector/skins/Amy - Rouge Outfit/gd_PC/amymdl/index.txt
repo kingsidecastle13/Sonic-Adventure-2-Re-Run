@@ -1,0 +1,10 @@
+1026,amy_hmr00.png,64x64
+1027,atx_00.png,64x64
+1028,atx_01.png,64x64
+1029,atx_eye.png,32x32
+1030,atx_ref.png,32x32
+1031,atx_ref01.png,32x32
+1032,atx_s000.png,64x64
+1057,emy_heart.png,64x64
+1090,e_heart_mini.png,32x32
+96001210,atx_newspin.png,64x64

@@ -1,0 +1,24 @@
+System.ArgumentOutOfRangeException: Se necesita un número no negativo.
+Nombre del parámetro: value
+   en System.IO.MemoryStream.set_Position(Int64 value)
+   en PuyoTools.Modules.Archive.GvmArchiveReader..ctor(Stream source)
+   en PuyoTools.Modules.Archive.GvmArchive.Open(Stream source)
+   en PuyoTools.Modules.Archive.ArchiveBase.Open(Byte[] source, Int32 offset, Int32 length)
+   en SonicRetro.SAModel.Direct3D.TextureSystem.TextureArchive.GetTextures(String filename) en E:\Programs\sa_tools\SAModel.Direct3D\TextureSystem\TextureArchive.cs:línea 31
+   en SonicRetro.SAModel.SAMDL.MainForm.loadTexturesToolStripMenuItem_Click(Object sender, EventArgs e) en E:\Programs\sa_tools\SAMDL\MainForm.cs:línea 1081
+   en System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   en System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   en System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   en System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

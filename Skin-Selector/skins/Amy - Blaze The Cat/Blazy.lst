@@ -1,0 +1,213 @@
+Patch "(Blazy) Make Amy able to Spindash" Required
+write16 00723E1F 0x9066
+write8 00725257 0xEB
+write8 00725E76 0xEB
+
+Code "(Blazy) Blaze Custom Physics" Required
+ifeq8 0174b015 1
+	ifeq8 01934B80 0
+		ifeqfloat p01dea6e0|40|D0 1.299999952
+			writefloat p01dea6e0|40|D0 2
+		endif
+		writefloat p01dea6e0|40|D8 1.75
+		writefloat p01dea6e0|40|F8 0.08
+		writefloat p01dea6e0|40|100 0.042
+		writefloat p01dea6e0|40|114 -0.006
+	endif
+endif
+ifeq8 0174b016 1
+	ifeq8 01934BE4 0
+		ifeqfloat p01dea6e4|40|D0 1.299999952
+			writefloat p01dea6e4|40|D0 2
+		endif
+		writefloat p01DEA6E4|40|D8 1.75
+		writefloat p01DEA6E4|40|F8 0.08
+		writefloat p01DEA6E4|40|100 0.042
+		writefloat p01dea6e4|40|114 -0.006
+	endif
+endif
+
+Code "(Blazy) Blaze have Flame Ring Power"
+ifeq8 0174afde 0x0
+	ifeq8 01934B80 0x0
+		ifeq8 0174b015 0x1
+			or32 p01dea6e0|40|24 0x8
+		endif
+	endif
+	ifeq8 01934BE4 0x0
+		ifeq8 0174b016 0x1
+			or32 p01dea6e4|40|24 0x8
+		endif
+	endif
+endif
+
+Code "(Blazy) Press Y to Boost (Cost Rings)"
+ifeq8 01934BE0 16
+	ifmask16 01A529EC 2048
+		ifltu8 p01DEA6E0|34|5 5
+			ifltequ8 01934B80 1
+				ifgtu16 0174b028 0
+					ifeq8 p01DEA6E0|34|0 1
+						ifltfloat p01DEA6E0|40|64 10
+							writefloat p01DEA6E0|40|64 10
+							write8 p01DEA6E0|34|0 4
+							write8 p01DEA6E0|34|5 4
+							write8 p01DEA6E0|40|174 10
+							write16 p01DEA6E0|40|176 10
+							write16 p01DEA6E0|40|178 10
+							write16 p01DEA6E0|40|17A 10
+							sub16 0174b028 1
+							ifeq32 p01A55874|61C 0x00000000
+								write32 p01A55874|610 0x00000B02
+								write32 p01A55874|618 0x00000001
+								write32 p01A55874|61C 01
+								write32 p01A55874|624 0x0000601C
+							endif
+						endif
+					endif
+					ifeq8 p01DEA6E0|34|0 4
+						ifltfloat p01DEA6E0|40|64 8
+							writefloat p01DEA6E0|40|64 8
+							write8 p01DEA6E0|34|5 4
+							write8 p01DEA6E0|40|174 10
+							write16 p01DEA6E0|40|176 10
+							write16 p01DEA6E0|40|178 10
+							write16 p01DEA6E0|40|17A 10
+							ifeq8 0174AFDD 59
+								sub16 0174b028 1
+							endif
+							ifeq8 0174AFDD 39
+								sub16 0174b028 1
+							endif
+							ifeq8 0174AFDD 19
+								sub16 0174b028 1
+							endif
+						endif
+					endif
+					ifeq8 p01DEA6E0|34|0 6
+						ifltfloat p01DEA6E0|40|64 8
+							writefloat p01DEA6E0|40|64 8
+							write8 p01DEA6E0|34|0 13
+							write8 p01DEA6E0|34|5 4
+							write8 p01DEA6E0|40|174 3
+							write16 p01DEA6E0|40|176 100
+							write16 p01DEA6E0|40|178 100
+							write16 p01DEA6E0|40|17A 100
+							sub16 0174b028 1
+							ifeq32 p01A55874|61C 0x00000000
+								write32 p01A55874|610 0x00000B02
+								write32 p01A55874|618 0x00000001
+								write32 p01A55874|61C 01
+								write32 p01A55874|624 0x0000601C
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+	ifeq16 01A529EC 0
+		ifeq8 p01DEA6E0|34|0 4
+			ifeq8 p01DEA6E0|40|174 10
+				ifeq16 p01DEA6E0|40|176 10
+					ifeq16 p01DEA6E0|40|178 10
+						ifeq16 p01DEA6E0|40|17A 10
+							write8 p01DEA6E0|34|0 1
+							write8 p01DEA6E0|34|5 0
+						endif
+					endif
+				endif
+			endif
+		endif
+		ifeq8 p01DEA6E0|34|0 10
+			ifeq8 p01DEA6E0|34|5 5
+				write8 p01DEA6E0|34|0 6
+				write8 p01DEA6E0|34|5 4
+			endif
+		endif
+	endif
+	ifmask16 01A52C6C 2048
+		ifltu8 p01DEA6E4|34|5 5
+			ifltequ8 01934B84 1
+				ifgtu16 0174b02A 0
+					ifeq8 p01DEA6E4|34|0 1
+						ifltfloat p01DEA6E4|40|64 10
+							writefloat p01DEA6E4|40|64 10
+							write8 p01DEA6E4|34|0 4
+							write8 p01DEA6E4|34|5 4
+							write8 p01DEA6E4|40|174 10
+							write16 p01DEA6E4|40|176 10
+							write16 p01DEA6E4|40|178 10
+							write16 p01DEA6E4|40|17A 10
+							sub16 0174b02A 1
+							ifeq32 p01A55874|64C 0x00000000
+								write32 p01A55874|640 0x00000B02
+								write32 p01A55874|648 0x00000001
+								write32 p01A55874|64C 01
+								write32 p01A55874|654 0x0000601C
+							endif
+						endif
+					endif
+					ifeq8 p01DEA6E4|34|0 4
+						ifltfloat p01DEA6E4|40|64 8
+							writefloat p01DEA6E4|40|64 8
+							write8 p01DEA6E4|34|5 4
+							write8 p01DEA6E4|40|174 10
+							write16 p01DEA6E4|40|176 10
+							write16 p01DEA6E4|40|178 10
+							write16 p01DEA6E4|40|17A 10
+							ifeq8 0174AFDD 59
+								sub16 0174b02A 1
+							endif
+							ifeq8 0174AFDD 39
+								sub16 0174b02A 1
+							endif
+							ifeq8 0174AFDD 19
+								sub16 0174b02A 1
+							endif
+						endif
+					endif
+					ifeq8 p01DEA6E4|34|0 6
+						ifltfloat p01DEA6E4|40|64 8
+							writefloat p01DEA6E4|40|64 8
+							write8 p01DEA6E4|34|0 13
+							write8 p01DEA6E4|34|5 4
+							write8 p01DEA6E4|40|174 3
+							write16 p01DEA6E4|40|176 100
+							write16 p01DEA6E4|40|178 100
+							write16 p01DEA6E4|40|17A 100
+							sub16 0174b02A 1
+							ifeq32 p01A55874|64C 0x00000000
+								write32 p01A55874|640 0x00000B02
+								write32 p01A55874|648 0x00000001
+								write32 p01A55874|64C 01
+								write32 p01A55874|654 0x0000601C
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+	ifeq16 01A52C6C 0
+		ifeq8 p01DEA6E4|34|0 4
+			ifeq8 p01DEA6E4|40|174 10
+				ifeq16 p01DEA6E4|40|176 10
+					ifeq16 p01DEA6E4|40|178 10
+						ifeq16 p01DEA6E4|40|17A 10
+							write8 p01DEA6E4|34|0 1
+							write8 p01DEA6E4|34|5 0
+						endif
+					endif
+				endif
+			endif
+		endif
+		ifeq8 p01DEA6E4|34|0 10
+			ifeq8 p01DEA6E4|34|5 5
+				write8 p01DEA6E4|34|0 6
+				write8 p01DEA6E4|34|5 4
+			endif
+		endif
+	endif
+	write16 44CEC5 0xE990
+endif

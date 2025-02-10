@@ -1,0 +1,49 @@
+{
+  "Models": {
+    "1": {
+      "Position": {},
+      "Rotation": {
+        "0": "0, 0, 0",
+        "1": "0, 0, 1FFF",
+        "2": "0, 0, 3FFF",
+        "3": "0, 0, 5FFF",
+        "4": "0, 0, 7FFF",
+        "5": "0, 0, 9FFF",
+        "6": "0, 0, BFFF",
+        "7": "0, 0, DFFF"
+      },
+      "Scale": {},
+      "Vector": {},
+      "Vertex": {},
+      "Normal": {},
+      "Target": {},
+      "Roll": {},
+      "Angle": {},
+      "Color": {},
+      "Intensity": {},
+      "Spot": {},
+      "Point": {},
+      "PositionName": null,
+      "RotationName": "animation_00002AC0_mkey_1_rot_00002A20",
+      "ScaleName": null,
+      "VectorName": null,
+      "VertexName": null,
+      "VertexItemName": null,
+      "NormalItemName": null,
+      "NormalName": null,
+      "TargetName": null,
+      "RollName": null,
+      "AngleName": null,
+      "ColorName": null,
+      "IntensityName": null,
+      "SpotName": null,
+      "PointName": null
+    }
+  },
+  "Frames": 8,
+  "Name": "animation_00002AC0",
+  "MdataName": "animation_00002AC0_mdat_00002AA0",
+  "ModelParts": 2,
+  "InterpolationMode": 0,
+  "ShortRot": false
+}

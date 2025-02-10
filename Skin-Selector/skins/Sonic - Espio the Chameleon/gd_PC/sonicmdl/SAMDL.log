@@ -1,0 +1,15 @@
+System.NotImplementedException: The method or operation is not implemented.
+   at SonicRetro.SAModel.SAMDL.MainForm.ActionInputCollector_OnActionRelease(ActionInputCollector sender, String actionName) in E:\Programs\sa_tools\SAMDL\MainForm.cs:line 765
+   at SonicRetro.SAModel.SAEditorCommon.UI.ActionInputCollector.KeyUp(Keys keys) in E:\Programs\sa_tools\SAEditorCommon\UI\ActionInputCollector.cs:line 125
+   at SonicRetro.SAModel.SAMDL.MainForm.panel1_KeyUp(Object sender, KeyEventArgs e) in E:\Programs\sa_tools\SAMDL\MainForm.cs:line 909
+   at System.Windows.Forms.Control.OnKeyUp(KeyEventArgs e)
+   at System.Windows.Forms.Control.ProcessKeyEventArgs(Message& m)
+   at System.Windows.Forms.Control.ProcessKeyMessage(Message& m)
+   at System.Windows.Forms.Control.WmKeyChar(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   at System.Windows.Forms.UserControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

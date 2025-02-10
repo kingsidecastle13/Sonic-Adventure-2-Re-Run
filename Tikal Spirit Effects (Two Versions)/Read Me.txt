@@ -1,0 +1,1 @@
+If you have downloaded both versions of the mod, make sure to only activate one of them at a time in ModManager.

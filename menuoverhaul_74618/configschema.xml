@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Options" display="Options">
+			<Property name="Force43Menu" display="Force 4:3 Menu Background" type="bool" defaultvalue="False">
+				<HelpText>Force the 4:3 SA2B Main Menu background. (The other disappears on the Main Menu)</HelpText>
+			</Property>	
+			<Property name="DisableLogoTweaks" display="Disable Logo Tweaks" type="bool" defaultvalue="False">
+				<HelpText>Re-Enable the SA2B Intro animation for the original SA2 Menu. (NOTE: Scale will be returned to normal.)</HelpText>
+			</Property>	
+			<Property name="DisablePauseTweaks" display="Disable Pause Menu Tweaks" type="bool" defaultvalue="False">
+				<HelpText>Keep the SA2PC Pause menu. Needed for mods that edit the pause menu.</HelpText>
+			</Property>	
+			<Property name="UseOmochaoTutorial" display="Use Omochao Tutorial" type="bool" defaultvalue="True">
+				<HelpText>Use the Omochao Tutorial. Disable this and the Tutorial button will use SA2PC's How To Play menu instead.</HelpText>
+			</Property>	
+			<Property name="HideExitButton" display="Hide Exit Button" type="bool" defaultvalue="False">
+				<HelpText>Hides the "Exit" button.</HelpText>
+			</Property>	
+			<Property name="2PStyle" display="2P Menu Style [WIP]" type="2PMenuStyle" defaultvalue="Auto">
+				<HelpText>Enables the DC 2P Menu. Default depends on the DLC being enabled, see changelog for details.</HelpText>
+			</Property>	
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name = "2PMenuStyle">
+			<EnumMember name = "Auto" />
+			<EnumMember name = "Dreamcast" />
+			<EnumMember name = "Vanilla" />
+		</Enum>
+	</Enums>
+</ConfigSchema>

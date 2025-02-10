@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+  <Groups>
+    <Group name="General" display="1. General Settings">
+
+		<Property name="isCustomAnim" type="bool" defaultvalue="True" display= "Allow Custom Animations">
+		<HelpText>Add custom animations (SA1 Punch, grinding...) Only work with Knuckles and Rouge. Disable this if you are experimenting crash during gameplay.</HelpText>
+		</Property>
+		
+				
+		<Property name="isSA1Punch" type="bool" defaultvalue="True" display= "Allow Knuckles SA1 Punch">
+		<HelpText>Allow SA1 punch. (ONLY WORK WITH KNUCKLES AND REQUIRE CUSTOM ANIMATION ENABLED.)</HelpText>
+		</Property>
+
+		
+	<Property name="isRoll" type="bool" defaultvalue="True" display= "Allow Rolling">
+		<HelpText>Allow the hunters to roll so they can pass somersault obstacle.</HelpText>
+		</Property>
+		
+		
+				<Property name="fastGlasses" type="bool" defaultvalue="False" display= "Fast Sunglasses">
+		<HelpText>Map the sunglasses on the d-pad (up) also let glasses ON when you jump. (NOT COMPATIBLE WITH KEYBOARD PLAYERS.)</HelpText>
+		</Property>
+		
+						<Property name="noFilter" type="bool" defaultvalue="True" display= "Remove Blue Filter">
+		<HelpText>Remove the blue filter when you have the sunglasses on.</HelpText>
+		</Property>
+		
+		<Property name="alwaysHunter" type="chara" defaultvalue="0" display= "Hunter Adventure 2 Battle">
+		<HelpText>Always play one of the selected hunter.</HelpText>
+		</Property>
+
+
+
+    </Group>
+		 <Group name="ActionRemap" display="2. Action Remap">
+		 
+	<Property name="SA1PunchButton" type="Buttons2" defaultvalue="0" display="SA1 Punch Button">
+	        <HelpText>Select the SA1 Punch button. (Note: you can't have others attacks mapped on the same button than SA2 Punch.)</HelpText>
+		 </Property>
+		 
+		 	<Property name="RollButton" type="Buttons2" defaultvalue="0" display="Roll Button">
+	        <HelpText>Select the Roll button.</HelpText>
+		 </Property>
+		 
+		 		<Property name="SA2PunchButton" type="Buttons" defaultvalue="1" display="SA2 Punch/Kick Button">
+	        <HelpText>Select the SA2 Punch/Kick button. (Note: you can't have others attacks mapped on the same button than SA2 Punch.)</HelpText>
+		 </Property>
+		
+	</Group>
+
+	
+	
+  </Groups>
+  
+    <Enums>
+    <Enum name="Buttons">
+      <EnumMember name="0" display="B" />
+      <EnumMember name="1" display="X" />
+      <EnumMember name="2" display="Y" />
+	  <EnumMember name="3" display="B and X (vanilla)" />
+    </Enum>
+	
+	    <Enum name="Buttons2">
+      <EnumMember name="0" display="B" />
+      <EnumMember name="1" display="X" />
+      <EnumMember name="2" display="Y" />
+    </Enum>
+	
+	    <Enum name="chara">
+	  <EnumMember name="0" display="Disabled" />
+      <EnumMember name="4" display="Knuckles" />
+      <EnumMember name="5" display="Rouge" />
+      <EnumMember name="15" display="Tikal" />
+	  <EnumMember name="16" display="Chaos" />
+    </Enum>
+	
+	</Enums>
+</ConfigSchema>

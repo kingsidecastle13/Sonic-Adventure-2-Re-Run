@@ -1,0 +1,19 @@
+==Version 1.15==
+Added WIP DC 2P Menu.
+- 90% Functional. Costumes and Icons are fixed but the DC unlock requirements haven't been implemented yet + a minor issue with how the option on the main menu behaves before unlocking 2P Kart/Chao Race.
+- Still uses the original DC background system, which isn't adjusted for 16:9 and has layering issues with the scrolling background text.
+- By default this menu is now used (with the costumes disabled) if you play without the DLC enabled, as it's functionally identical to the vanilla one in that case. [NOTE: This will NOT happen with the NoBattle mod, since that retains the full SA2B 2P options.] In config you can choose to force either this menu or the default one.
+- Enabled the hidden GHZ option, which is at the bottom of the stage select list. If you don't have 180 Emblems, it shows up as "???" and can't be selected.
+- No 2P Play button yet.
+
+==Version 1.1==
+* Now automatically compatible with No Battle and Chao Data Viewer
+* Exit option, can be hidden via config though.
+
+==Version 1.0==
+* Decluttered the Main Menu (1P/2P/Extra/Options)
+* Enabled World Ranking/Tutorial buttons (WR loads Leaderboards, comes with newMenu.pak due to SA2PC missing the WR menu graphic.)
+* Scrolling text for the original SA2 menu
+* More accurate position/scale for title screen elements (Both versions)
+* Removed zooming animation for the original menu (DC version doesn't have it. I think it'd need to be adjusted anyway for the different sized logo. Can be re-enabled in config.)
+* Decluttered pause menu (Continue/Restart/Exit)

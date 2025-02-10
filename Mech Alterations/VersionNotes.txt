@@ -1,0 +1,15 @@
+1:
+- Rings and health increase meximum speed.
+- Hold [B] whilst hovering to stall all momentum - * (a) see version 2. 
+- Hold [L] + [R] in air to fall quickly - *(b) see version 2.
+- Loose 30 rings at most when hit.
+- Knock-backs from taking hits reduced. 
+
+2:
+- No longer loose ANY X speed when hovering, running and turning at the same time.
+- Strafe whilst hovering by using the right control stick or [L] & [R] bumpers (Tank controls, relative to character).
+*(a) ALSO holding [B] whilst running will kill all momentum. 
+*(b) ALSO can hold down on right control stick to fall quickly.
+
+2.1:
+- No longer crashes on Kart stages 

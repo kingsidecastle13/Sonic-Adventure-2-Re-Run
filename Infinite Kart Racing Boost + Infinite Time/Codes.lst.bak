@@ -1,0 +1,2 @@
+Code "Infinite Cart Racing Boost" Required
+write8 01D96F48 0x01

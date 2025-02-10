@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+        <Group name="CustomGarden" display="Garden Options">
+            <Property name="IncludeDir3" display="Which Garden" type="Gardens" defaultvalue="ZenPoolGarden">
+                <HelpText>Choose Which Garden to use. Remember to set Enhanced Chao World's Dark Garden config to vanilla/modded for the Zen Pool Garden!</HelpText>
+            </Property>
+        </Group>
+        <Group name="MusicOptions" display="Music Options">
+          <Property name="IncludeDir1" display ="Music Type" type="Music" defaultvalue="NatureSounds">
+            <HelpText>Select Music Used.</HelpText>
+          </Property>
+        </Group>
+   </Groups>
+    <Enums>
+      <Enum name="Gardens">
+        <EnumMember name="ZenPoolGarden" display="Zen Pool Garden"/>
+        <EnumMember name="ECWDreamcastGarden" display="ECW Dreamcast Garden"/>
+      </Enum>
+      <Enum name="Music">
+        <EnumMember name="JapaneseGardenMusic" display="Play Japanese Garden Music"/>
+        <EnumMember name="NatureSounds" display="Play Nature Sounds"/>
+      </Enum>
+	  </Enums>
+</ConfigSchema>

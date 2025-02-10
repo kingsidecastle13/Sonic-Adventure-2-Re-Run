@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name = "">
+			<Property name = "Controller" display = "Controller" type = "Controller" defaultvalue = "Vanilla/Custom">
+				<HelpText>Select your controller. Vanilla/Custom would disable the mod.</HelpText>
+			</Property>
+			<Property name = "ButtonIconPrompt" display = "Button Icon Prompt" type = "ButtonPromptStyle" defaultvalue = "B/Circle">
+				<HelpText>Choose the button you want to display on the button prompt.</HelpText>
+			</Property>
+			<Property name = "Color" display = "Button Color" type = "Color" defaultvalue = "Black">
+				<HelpText>Choose the button color for the button prompt.
+				(WIP, only black is available for now.)</HelpText>
+			</Property>
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name = "Controller">
+			<EnumMember name = "Vanilla/Custom"/>
+			<EnumMember name = "Xbox (one, series x/s) controllers"/>
+			<EnumMember name = "Nintendo Controllers"/>
+			<EnumMember name = "DualShock (Playstation contollers)" />
+		</Enum>
+		<Enum name = "ButtonPromptStyle">
+			<EnumMember name = "B/Circle" />
+			<EnumMember name = "A/Cross" />
+			<EnumMember name = "X/Square" />
+			<EnumMember name = "Y/Triangle" />
+		</Enum>
+		<Enum name = "Color">
+			<EnumMember name = "Black"/>
+		</Enum>
+	</Enums>
+</ConfigSchema>

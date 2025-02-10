@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="">
+			<Property name="Sonic" type="Characters" defaultvalue="Sonic" />
+			<Property name="Shadow" type="Characters" defaultvalue="Shadow" />
+			<Property name="Tails" type="Characters" defaultvalue="Tails" />
+			<Property name="Eggman" type="Characters" defaultvalue="Eggman" />
+			<Property name="Knuckles" type="Characters" defaultvalue="Knuckles" />
+			<Property name="Rouge" type="Characters" defaultvalue="Rouge" />
+			<Property name="MechTails" display="Mech Tails" type="Characters" defaultvalue="MechTails" />
+			<Property name="MechEggman" display="MechEggman" type="Characters" defaultvalue="MechEggman" />
+			<Property name="Amy" type="Characters" defaultvalue="Amy" />
+			<Property name="SuperSonic" display="Super Sonic" type="Characters" defaultvalue="SuperSonic" />
+			<Property name="SuperShadow" display="Super Shadow" type="Characters" defaultvalue="SuperShadow" />
+			<Property name="MetalSonic" display="Metal Sonic" type="Characters" defaultvalue="MetalSonic" />
+			<Property name="ChaoWalker" display="Chao Walker" type="Characters" defaultvalue="ChaoWalker" />
+			<Property name="DarkChaoWalker" display="Dark Chao Walker" type="Characters" defaultvalue="DarkChaoWalker" />
+			<Property name="Tikal" type="Characters" defaultvalue="Tikal" />
+			<Property name="Chaos" type="Characters" defaultvalue="Chaos" />
+		</Group>
+	</Groups>
+	<Enums>
+		<Enum name="Characters">
+			<EnumMember name="Sonic" />
+			<EnumMember name="Shadow" />
+			<EnumMember name="Tails" />
+			<EnumMember name="Eggman" />
+			<EnumMember name="Knuckles" />
+			<EnumMember name="Rouge" />
+			<EnumMember name="MechTails" display="Mech Tails" />
+			<EnumMember name="MechEggman" display="Mech Eggman" />
+			<EnumMember name="Amy" />
+			<EnumMember name="SuperSonic" display="Super Sonic" />
+			<EnumMember name="SuperShadow" display="Super Shadow" />
+			<EnumMember name="MetalSonic" display="Metal Sonic" />
+			<EnumMember name="ChaoWalker" display="Chao Walker" />
+			<EnumMember name="DarkChaoWalker" display="Dark Chao Walker" />
+			<EnumMember name="Tikal" />
+			<EnumMember name="Chaos" />
+			<EnumMember name="SADXSonic" display="SADX Sonic" />
+			<EnumMember name="SADXEggman" display="SADX Eggman" />
+			<EnumMember name="SADXTails" display="SADX Tails" />
+			<EnumMember name="SADXKnuckles" display="SADX Knuckles" />
+			<EnumMember name="SADXTikal" display="SADX Tikal" />
+			<EnumMember name="SADXAmy" display="SADX Amy" />
+			<EnumMember name="SADXGamma" display="SADX Gamma" />
+			<EnumMember name="SADXBig" display="SADX Big" />
+			<EnumMember name="SADXSuperSonic" display="SADX Super Sonic" />
+			<EnumMember name="HeroesSonic" display="Heroes Sonic" />
+			<EnumMember name="HeroesKnuckles" display="Heroes Knuckles" />
+			<EnumMember name="HeroesTails" display="Heroes Tails" />
+			<EnumMember name="HeroesShadow" display="Heroes Shadow" />
+			<EnumMember name="HeroesOmega" display="Heroes Omega" />
+			<EnumMember name="HeroesRouge" display="Heroes Rouge" />
+			<EnumMember name="HeroesAmy" display="Heroes Amy" />
+			<EnumMember name="HeroesBig" display="Heroes Big" />
+			<EnumMember name="HeroesCream" display="Heroes Cream" />
+			<EnumMember name="HeroesEspio" display="Heroes Espio" />
+			<EnumMember name="HeroesVector" display="Heroes Vector" />
+			<EnumMember name="HeroesCharmy" display="Heroes Charmy" />
+		</Enum>
+	</Enums>
+</ConfigSchema>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+	<Group name="Config">
+
+			<Property name="menuInput" display="Button to Open Menu" type="Buttons" defaultvalue="4">
+				<HelpText>Configure the button to open the Skin Selector menu, this is based on Xbox and Playstation controller. You can always open the menu by pressing i on the keyboard.</HelpText>
+			</Property>	
+			
+			<Property name="saveSkin" display="Save Selected Skins" type="Bool" defaultvalue="True">
+				<HelpText>This will save your last skin selected for each players and characters. That way when you will restart SA2 or change stage, the last selected skin will be loaded.</HelpText>
+			</Property>	
+			
+			</Group>
+
+		</Groups>
+		
+	<Enums>
+
+
+	<Enum name="Buttons">
+      <EnumMember name="4" display="Back / Share" />
+      <EnumMember name="5" display="Guide" />
+	  <EnumMember name="7" display="Left Stick Press (LS / L3)" />
+	  <EnumMember name="8" display="Right Stick Press (RS / R3)" />
+	  <EnumMember name="9" display="Left Shoulder (LB / L1)" />
+	  <EnumMember name="10" display="Right Shoulder (RB / R1)" />
+	  <EnumMember name="512" display="Y / Triangle)" />
+
+    </Enum>
+
+		
+	</Enums>
+</ConfigSchema>

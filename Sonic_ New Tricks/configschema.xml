@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+  <Groups>
+    <Group name="General" display="1. General Settings">
+	
+      <Property name="sa1dash" type="bool" defaultvalue="True" display= "Instant Spin Dash">
+        <HelpText>Remove the Spin Dash delay to make it more like SA1.</HelpText>
+		</Property>
+		
+		<Property name="sa1speed" type="bool" defaultvalue="True" display= "Faster Spin Dash">
+        <HelpText>Increase the speed of the spin dash.</HelpText>
+		</Property>
+		
+		 <Property name="sa1SFX" type="bool" defaultvalue="True" display= "SA1 Sound Effects">
+        <HelpText>Use the original SA1 Sound Effects when jumping and spin dashing. (Might not work with CWE or CharSel mod.)</HelpText>
+		</Property>
+		
+			 	<Property name="jumpBall" type="bool" defaultvalue="True" display="Restore Ball Form / Jump Ball">
+        <HelpText>In SA1, when you jump and Homing Attack, Sonic uses a ball form, this option will restore it. (Also apply for Shadow).</HelpText>
+		</Property>
+		
+		<Property name="superBounce" type="bool" defaultvalue="True" display= "Super Bounce">
+        <HelpText>Increase the speed of the bounce to make you go higher.</HelpText>
+		</Property>
+		
+		<Property name="SpinDashSomersault" type="bool" defaultvalue="False" display= "Spin Dash can pass Somersault obstacles">
+        <HelpText>[EXPERIEMNTAL] Allow the Spin Dash to pass through somersault obstacles, this creates a small issue with slope physics, so be aware.</HelpText>
+		</Property>
+	</Group>
+	
+	    <Group name="ActionRemap" display="2. Action Remap">
+				 
+	<Property name="LightDashButton" type="Buttons" defaultvalue="2" display="Light Dash Button">
+	        <HelpText>Select the Light Dash button. (Apply for every speed character).</HelpText>
+		 </Property>
+		 
+	<Property name="BounceButton" type="Buttons" defaultvalue="1" display="Bounce Button">
+	        <HelpText>Select the Bounce button. (Apply for every speed character).</HelpText>
+		 </Property>
+		 
+	<Property name="SpinDashButton" type="Buttons" defaultvalue="1" display="Spin Dash Button">
+	        <HelpText>Select the Spin Dash button. (Apply for every speed character).</HelpText>
+		 </Property>
+		 
+		 	<Property name="SomersaultButton" type="Buttons" defaultvalue="0" display="Somersault Button">
+	        <HelpText>Select the Somersault button. (Apply for every speed character).</HelpText>
+		 </Property>
+		 
+		 		 		<Property name="shieldButton" type="Buttons" defaultvalue="2" display="Black Shield Button">
+	        <HelpText>Select Metal Sonic Black Shield switch button.</HelpText>
+		 </Property>
+		 
+		 		 	<Property name="pickButton" type="Buttons" defaultvalue="3" display="Pick Object Button">
+	        <HelpText>Select the Pick object button.</HelpText>
+		 </Property>
+		 
+		 		 		 	<Property name="putButton" type="Buttons" defaultvalue="3" display="Put Object Button">
+	        <HelpText>Select the Put object button.</HelpText>
+		 </Property>
+		 		 
+		 		 	<Property name="grabButton" type="Buttons" defaultvalue="3" display="Grab Object Button">
+	        <HelpText>Select the Grab object button.</HelpText>
+		 </Property>
+		 
+		<Property name="petButton" type="Buttons" defaultvalue="2" display="Pet Button">
+	        <HelpText>Select the pet button.</HelpText>
+		 </Property>
+		 
+		 		<Property name="gravityButton" type="Buttons" defaultvalue="2" display="Crazy Gadget Switch Button">
+	        <HelpText>Select the CG switch button.</HelpText>
+		 </Property>
+		
+		
+		
+		</Group>
+		
+	 <Group name="Sonic" display="3. Sonic Settings">
+		
+	  <Property name="sonicGrunt" type="bool" defaultvalue="True" display="Homing Attack Grunt">
+        <HelpText>Allow Sonic grunt sound when Homing Attack.</HelpText>
+		</Property>
+
+	</Group>
+	
+	 <Group name="Shadow" display="4. Shadow Settings">
+		<Property name="shBounce" type="bool" defaultvalue="True" display="Shadow has Bounce Bracelet">
+        <HelpText>Allow Shadow to bounce.</HelpText>
+		</Property>
+		
+	  <Property name="shGrunt" type="bool" defaultvalue="True" display="Shadow Homing Attack Grunt">
+        <HelpText>Allow Shadow grunt sound when Homing Attack.</HelpText>
+		</Property>
+		
+		</Group>
+		
+		<Group name="Amy" display="5. Amy Settings">
+		
+	  <Property name="amyGrunt" type="bool" defaultvalue="False" display="Amy Homing Attack Grunt">
+        <HelpText>Allow Amy grunt sound when Homing Attack.</HelpText>
+		</Property>
+				</Group>
+
+		<Group name="MS" display="6. Metal Sonic Settings">
+		
+	  <Property name="spindashMS" type="bool" defaultvalue="True" display="Allow Metal Sonic Spin Dash.">
+        <HelpText>Allow Metal Sonic to Spin Dash.</HelpText>
+		</Property>
+			  <Property name="bsLimit" type="bool" defaultvalue="True" display="Remove Black Shield limits">
+        <HelpText>Make Black Shield faster to use and remove speed caps.</HelpText>
+		</Property>
+	</Group>
+	
+  </Groups>
+  
+   <Enums>
+    <Enum name="Buttons">
+      <EnumMember name="0" display="B" />
+      <EnumMember name="1" display="X" />
+      <EnumMember name="2" display="Y" />
+	  <EnumMember name="3" display="B and X (vanilla)" />
+    </Enum>
+	</Enums>
+  
+</ConfigSchema>

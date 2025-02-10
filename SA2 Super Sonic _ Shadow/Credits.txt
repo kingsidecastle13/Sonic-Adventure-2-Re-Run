@@ -1,0 +1,7 @@
+I would like to thank the following people:
+
+MainMemory - Author of most of the SA2 hacking tools, including the SA2 Mod Loader, also her code helped with the Jiggle part of this mod.
+
+Kell - Helped with the CallBack feature for aura/somersault position.
+
+X-Hax - SA Tools

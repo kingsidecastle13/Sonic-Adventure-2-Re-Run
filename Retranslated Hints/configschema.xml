@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Translations" display="Enable/Disable Features">
+			<Property name="IncludeDir0" display="Treasure Hunting Hints" type="Hunting" defaultvalue="Hunting">
+				<HelpText>Over 3000 retranslated hints that you can get from the space probes in Treasure Hunting stages.</HelpText>
+			</Property>
+
+			<Property name="IncludeDir1" display="Omochao Hints" type="Omochao" defaultvalue="Omochao">
+				<HelpText>Omochao retranslated text messages in stages (Extra subtitles cannot be disabled).</HelpText>
+			</Property>
+
+			<Property name="IncludeDir2" display="Miscellaneous" type="Misc" defaultvalue="Misc">
+				<HelpText>Upgrade descriptions, Action Window and other minor stuff.</HelpText>
+			</Property>
+			
+		</Group>
+	</Groups>
+
+	<Enums>
+		<Enum name="Hunting">
+			<EnumMember name="0" display="Disabled" />
+			<EnumMember name="Hunting" display="Enabled" />
+		</Enum>
+
+		<Enum name="Omochao">
+			<EnumMember name="0" display="Disabled" />
+			<EnumMember name="Omochao" display="Enabled" />
+		</Enum>
+
+		<Enum name="Misc">
+			<EnumMember name="0" display="Disabled" />
+			<EnumMember name="Misc" display="Enabled" />
+		</Enum>
+		
+	</Enums>
+</ConfigSchema>

@@ -1,0 +1,84 @@
+01: checker road
+02: checkpoint
+03: straight
+04: one lane straight
+05: one lane start
+06: one lane end
+07: pit-stop right
+08: pit-stop left
+09: bridge start
+0a: tiny straight
+0b: three-lane with hole
+0c: gentle downhill middle
+0d: gentle uphill middle
+0e: steep downhill singlet
+0f: steep uphill singlet
+10: steep downhill middle
+11: gentle downhill singlet
+12: gentle uphill singlet
+13: gentle downhill start
+14: gentle downhill end
+15: gentle uphill start
+16: gentle uphill end
+17: steep downhill start
+18: steep downhill end
+19: gap
+1a: downwards gap
+1b: upwards gap
+1c: ground decoration
+1d: ground decoration (again)
+1e: narrow ground decoration
+1f: narrow ground decoration (again)
+20: 90 left
+21: 90 right
+22: 45 left
+23: 45 right
+24: uphill 90 left
+25: uphill 90 right
+26: uphill 45 left
+27: uphill 45 right
+28: downhill 90 left
+29: downhill 90 right
+2a: downhill 45 left
+2b: downhill 45 right
+2c: 90 sharp left
+2d: 90 sharp right
+2e: 90 sharp left (danger)
+2f: 90 sharp right (danger)
+30: 90 sharp left (cutout)
+31: 90 sharp right (cutout)
+32: tunnel start
+33: tunnel end
+34: tunnel straight
+35: tunnel 45 left
+36: tunnel 45 right
+37: tunnel narrow start
+38: tunnel narrow end
+39: tunnel narrow straight
+3a: tunnel narrow 45 left
+3b: tunnel narrow 45 right
+3c: tunnel uphill start
+3d: tunnel uphill
+3e: tunnel uphill end
+3f: tunnel downhill start
+40: tunnel downhill
+41: tunnel downhill end
+42: tunnel narrow uphill start
+43: tunnel narrow uphill
+44: tunnel narrow uphill end
+45: tunnel narrow downhill start
+46: tunnel narrow downhill
+47: tunnel narrow downhill end
+48: tilted right start
+49: tilted right turn
+4a: tilted right end
+4b: tilted left start
+4c: tilted left turn
+4d: tilted left end
+4e: tilted left straight
+4f: tilted right straight
+50: bridge end
+51: gentle skew left
+52: gentle skew right
+53: steep skew left
+54: steep skew right

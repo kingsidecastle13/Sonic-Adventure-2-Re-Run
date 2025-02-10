@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+	<Group name="Gameplay" display="Gameplay">
+	
+		<Property name="SSUnlocked" display="Unlock Condition" type="unlockedE" defaultvalue="1">
+				<HelpText>Select what condition you want to make Super Sonic / Shadow playable.</HelpText>
+			</Property>	
+
+			<Property name="RemoveLimitations" display="Remove limitations" type="bool" defaultvalue="False">
+				<HelpText>Remove the 50 rings needed and ring drop.</HelpText>
+			</Property>	
+			
+			
+			<Property name="transfoIntro" display="Show Transformation Animation" type="bool" defaultvalue="True">
+				<HelpText>Show a short animation when transforming with the Chaos Emeralds.</HelpText>
+			</Property>	
+			
+			
+			<Property name="AlwaysSuperSonic" display="Always Super Sonic" type="bool" defaultvalue="False">
+				<HelpText>Sonic will always be in Super Form.</HelpText>
+			</Property>	
+			
+						<Property name="AlwaysSuperShadow" display="Always Super Shadow" type="bool" defaultvalue="False">
+				<HelpText>Shadow will always be in Super Form.</HelpText>
+			</Property>	
+
+
+			<Property name="isPhysics" display="Custom Physics" type="bool" defaultvalue="True">
+				<HelpText>Use more powerful physics for Super Sonic. (in Vanilla, Super Sonic uses Sonic's regular physics.)</HelpText>
+			</Property>	
+			
+			<Property name="isFly" display="Flight" type="bool" defaultvalue="True">
+				<HelpText>Allow Super Sonic / Shadow to fly.</HelpText>
+			</Property>	
+			
+			<Property name="unTransform" display="Allow Detransformation" type="bool" defaultvalue="True">
+				<HelpText>Allow you to detransform.</HelpText>
+			</Property>	
+						
+			<Property name="AllowSuperAttacks" display="Chaos Control" type="bool" defaultvalue="True">
+				<HelpText>Allow Chaos Control in 1P (Hold Y / Triangle + X / Square at the same time).</HelpText>
+			</Property>	
+			
+		
+		</Group>
+		
+			<Group name="Controls" display="Controls">
+
+	<Property name="TransformButton" type="Buttons" defaultvalue="0" display="Transform Button">
+	        <HelpText>Select the transform button.</HelpText>
+		 </Property>
+		 
+		 	<Property name="FlightButton" type="Buttons" defaultvalue="1" display="Flight Button">
+	        <HelpText>Select the flight button.</HelpText>
+		 </Property>	
+		 
+		 		 	<Property name="boostBtn" type="Buttons" defaultvalue="0" display="Boost Button">
+	        <HelpText>Select the boost button, (only work when flying).</HelpText>
+		 </Property>
+		</Group>
+		
+		
+		<Group name="Appearance" display="Appearance">
+				<Property name="superAuraState" display="Display Super Aura" type="aura" defaultvalue="2">
+				<HelpText>Display the cool super aura.</HelpText>
+			</Property>	
+			
+				<Property name="SADXAura" display="Use SADX Super Aura" type="bool" defaultvalue="False">
+				<HelpText>Display SADX Super Aura instead of the SA2 one.</HelpText>
+			</Property>	
+			
+			<Property name="isUpgrade" display="Display Upgrades" type="bool" defaultvalue="True">
+				<HelpText>In the base game, Super Sonic and Shadow don't show any upgrade, this option allows to see them.</HelpText>
+			</Property>	
+			
+			<Property name="isJiggle" display="Enable Jiggle" type="bool" defaultvalue="True">
+				<HelpText>This option is exclusively for skin mod that needs the jiggle disabled, if insure, leave this enabled.</HelpText>
+			</Property>	
+			
+			<Property name="lifeIcon" display="Enable Life Icon" type="bool" defaultvalue="True">
+				<HelpText>Show Super Sonic / Shadow life icon and one up when transformed.</HelpText>
+			</Property>	
+
+			</Group>
+			
+		<Group name="Audio" display="Audio Settings">
+				        <Property name="SuperMusicVersionSS" type="Music" display="Super Sonic Music" defaultvalue="6">
+        <HelpText>Select which music you would like with Super Sonic.</HelpText>
+			</Property>
+			
+							        <Property name="SuperMusicVersionSSH" type="Music" display="Super Shadow Music" defaultvalue="8">
+        <HelpText>Select which music you would like with Super Shadow.</HelpText>
+			</Property>
+
+			</Group>
+		</Groups>
+		
+	<Enums>
+
+      <Enum name="Music">
+			<EnumMember name="0" display="None" />
+			<EnumMember name="1" display="Sonic 2" />
+			<EnumMember name="2" display="Sonic 3" />
+			<EnumMember name="3" display="Sonic and Knuckles" />
+			<EnumMember name="4" display="Sonic Adventure" />
+			<EnumMember name="5" display="Sonic Adventure 2 (Event Transformation)" />
+			<EnumMember name="6" display="Sonic Adventure 2 (Live and Learn)" />
+			<EnumMember name="7" display="Sonic Heroes (What I'm Made of)" />
+			<EnumMember name="8" display="Shadow The Hedgehog (I Am.. All Of Me)" />
+			<EnumMember name="9" display="Sonic 2006 (Solaris Phase 2)" />
+			<EnumMember name="10" display="Sonic Mania" />
+			<EnumMember name="11" display="Sonic Frontiers (Undefeatable)" />
+			<EnumMember name="12" display="Sonic Frontiers (Break Through It All - Extended Edition)" />
+			<EnumMember name="13" display="Sonic Frontiers (Find your Flame)" />
+			<EnumMember name="14" display="Sonic Superstars" />
+			<EnumMember name="15" display="Random" />
+		</Enum>
+
+					<Enum name="aura">
+      <EnumMember name="0" display="Never" />
+      <EnumMember name="1" display="Sometimes" />
+	  <EnumMember name="2" display="Always" />
+
+    </Enum>
+		
+			
+		<Enum name="Buttons">
+      <EnumMember name="0" display="B" />
+      <EnumMember name="1" display="Y" />
+	  <EnumMember name="2" display="X" />
+
+    </Enum>
+	
+ <Enum name="unlockedE">
+      <EnumMember name="0" display="Always Unlocked" />
+      <EnumMember name="1" display="Beat Last Story" />
+	  <EnumMember name="2" display="Get A Rank in Green Hill (if you love challenge!)" />
+
+    </Enum>
+
+		
+	</Enums>
+</ConfigSchema>

@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+    <Group name="OnOff" display="1. General Settings">
+      <Property name="seed" display="Randomizer Seed" type="int" defaultvalue="0">
+        <HelpText>Set a INTEGER (between -2147483647 and 2147483647) for a seed or type 0 for a random seed</HelpText>
+      </Property>
+      <Property name="story" type="Stories" display="Story Select" defaultvalue="None">
+        <HelpText>Select which story you would like splits for.</HelpText>
+      </Property>
+      <Property name="showNames" display="Show Stage Names in Splits" type="bool" defaultvalue="False">
+        <HelpText>Will Show Stages Names in the splits file</HelpText>
+      </Property>
+        <Property name="setchars" display="Set Characters" type="setTimes" defaultvalue="off">
+          <HelpText>Allow you to set the desired Character Replacements before or after randomization as per the '8. Character Replacement' Section </HelpText>
+      </Property>
+      <Property name="shadowBounce" display="Shadow/Metallix Bounce" type="bool" defaultvalue="False">
+        <HelpText>Allow you to use bounce bracelet on shadow and metal sonic </HelpText>
+      </Property>
+      <Property name="swap" display="Character Swap Type" type="swapType" defaultvalue="load">
+        <HelpText>Select if you want a random character per stage or per character. **Updated Default**</HelpText>
+      </Property>
+      <Property name="lives" display="Lives Per Stage" type="int" defaultvalue="99">
+        <HelpText>Set a INTEGER (between 0 and 99) lives will be set on the load of each playable non-kart level</HelpText>
+      </Property>
+      <Property name="rAltCost" display="Remove Costumes" type="bool" defaultvalue="False">
+        <HelpText>Removes the alternate costumes from the pool</HelpText>
+      </Property>
+      <Property name="upmods" display="Remove Upgrade Models" type="bool" defaultvalue="False">
+        <HelpText>Removes the upgrade models</HelpText>
+      </Property>
+      <Property name="noVanilla" display="Allow Vanilla Type Chars" type="bool" defaultvalue="True">
+        <HelpText>Allows vanilla type characters in stages as possible **Updated Default**</HelpText>
+      </Property>
+      <Property name="setRNG" display="Set RNG" type="bool" defaultvalue="False">
+        <HelpText>Allows for set RNG on stage load, but different for each given seed. [Race Mod set option coming soon]</HelpText>
+      </Property>
+      <Property name="setESG" display="Skip Emblem Cutscene" type="bool" defaultvalue="False">
+        <HelpText>Activates ESG (and skips the emblem get cutscene) </HelpText>
+      </Property>
+      <Property name="madSwap" display="Swap Mad Space for GHZ in Story" type="bool" defaultvalue="False">
+        <HelpText>Swaps Mad Space for Green Hill Zone in the story mode.</HelpText>
+      </Property>
+      <Property name="sadxRadar" display="SADX Style Radar" type="bool" defaultvalue="False">
+        <HelpText>All 3 radars active like sadx</HelpText>
+      </Property>
+      <Property name="crowdControl" display="[Beta] SA2 Twitch Chat Integration" type="bool" defaultvalue="False">
+        <HelpText>Connect to your twitch chat [login information in loginTwitch.txt] and allow chat to help/torture you</HelpText>
+      </Property>
+    </Group>
+    
+    <Group name="chaoSets" display="4. Chao Settings">
+      <Property name="saveChao" display="Consistent Chao Save Data" type="bool" defaultvalue="False">
+        <HelpText>Do not reset Rando's Chao Data on Load </HelpText>
+      </Property>
+      <Property name="cus" display="Custom Fortune Teller Names" type="bool" defaultvalue="True">
+        <HelpText>Loads names from FortuneTellerNames.txt </HelpText>
+      </Property>      
+      <Property name="unlock" display="All Races Unlocked" type="bool" defaultvalue="True">
+        <HelpText>yep </HelpText>
+      </Property>
+      <Property name="rChaoAnimals" display="Randomized Body Parts" type="bool" defaultvalue="False">
+        <HelpText>Give the randomized chao random animal parts/ hats </HelpText>
+      </Property>
+      <Property name="rChao" display="Disable Randomized Chao" type="bool" defaultvalue="False">
+        <HelpText>[True = turn option OFF]Randomize your chao (May have to re-enter garden for visual changes to happen) </HelpText>
+      </Property>
+      <Property name="maxChao" display="Disable Max Race Chao Stats" type="bool" defaultvalue="False">
+        <HelpText>[True = turn option OFF]Max your first 1 Chao (Should be able to beat all races) </HelpText>
+      </Property>
+      <Property name="disChaoRR" display="[Wouldnt Use]Reroll in Chao World" type="bool" defaultvalue="False">
+        <HelpText>Rerolls your RNG when you enter the Chao World</HelpText>
+      </Property>
+      <Property name="eAnimals" display="Enemies Drop Animals" type="bool" defaultvalue="False">
+        <HelpText>Enemies Drop Animals instead of chaos drives</HelpText>
+      </Property>
+      <Property name="maxEvo" display="Evolution Progress Max" type="int" defaultvalue="13">
+        <HelpText>Default 13, Higher makes chao evolve "more" 20-50 is crazy, 50+ is disaster, but funny disaster</HelpText>
+      </Property>
+      <Property name="raceDif" display="Race Difficulty" type="int" defaultvalue="0">
+        <HelpText>0- Vanilla, 10- Medium, 100- Expert, 1000- LOL impossible? (any int will work the numbers are just for an idea of scale)</HelpText>
+      </Property>
+      <Property name="disChaoRace" display="Disable Random Race Opponents" type="bool" defaultvalue="False">
+        <HelpText>Disable Random Race Opponents</HelpText>
+      </Property>
+      <Property name="karateDif" display="Karate Difficulty" type="int" defaultvalue="0">
+        <HelpText>0 = Vanilla, 1= 1% increase, 300 very hard  ... (any int will work the numbers are just for an idea of scale) </HelpText>
+      </Property>
+      <Property name="disChaoKarate" display="Disable Random Karate Opponents" type="bool" defaultvalue="False">
+        <HelpText>Disable Random Karate Opponents</HelpText>
+      </Property>
+    </Group>
+
+    <Group name="OnOffKart" display="5. Kart Settings">
+      <Property name="minR" display="Minimum Segments in Track" type="int" defaultvalue="100">
+        <HelpText>Set a INTEGER >= 30</HelpText>
+      </Property>
+      <Property name="maxR" display="Maximum Segments in Track" type="int" defaultvalue="250">
+        <HelpText>Set a INTEGER > min (this will eventually crash if its high enough) </HelpText>
+      </Property>
+      <Property name="rKartM" display="Randomize Kart Models" type="bool" defaultvalue="True">
+        <HelpText>Randomize Kart Models **Updated Default**</HelpText>
+      </Property>
+      <Property name="rKart" display="Disable Randomize Kart Stats" type="bool" defaultvalue="True">
+        <HelpText>[True = turn option OFF] Randomize Kart Stats (will not make it worse) **Updated Default**</HelpText>
+      </Property>
+      <Property name="rTrack" display="Vanilla R101/280 Tracks" type="bool" defaultvalue="False">
+        <HelpText>WIP, Randomily generates a track for r101 and for r280 each per seed</HelpText>
+      </Property>
+      <Property name="rTrackKart" display="Vanilla Kart Race Tracks" type="bool" defaultvalue="False">
+        <HelpText>WIP, Randomily generates a track for each kart race difficulty each per seed [not finishable]</HelpText>
+      </Property>
+    </Group>
+
+
+    <Group name="OnOffVL" display="3. VoiceLine Settings">
+      <Property name="vlType" display="Voiceline Randomization" type="vl" defaultvalue="Random">
+        <HelpText>Select how you would like the randomization to occur </HelpText>
+      </Property>
+      <Property name="subtitles" display="Subtitles" type="subs" defaultvalue="cuts">
+        <HelpText>Display subtitles for the current voiceline **Updated Default**</HelpText>
+      </Property> 
+      <Property name="border" display="Subtitle Borders" type="bool" defaultvalue="False">
+        <HelpText>Display subtitles for the current voiceline in blue border</HelpText>
+      </Property>
+      <Property name="tag" display="Game Tag in Subtitles" type="bool" defaultvalue="False">
+        <HelpText>Display a tag for the original game in the subtitles for the current voiceline</HelpText>
+      </Property>
+      <Property name="rVL" display="Disable Randomized Voicelines" type="bool" defaultvalue="False">
+        <HelpText>[True = turn option OFF] Randomize Voicelines... duh</HelpText>
+      </Property>
+      <Property name="cVL" display="Consistent VoiceLines" type="bool" defaultvalue="False">
+        <HelpText>Does not support the new, larger voiceline file yet .VERY SLOW GAME LOAD, GIVE IT TIME. Keeps a 1:1 mapping of voicelines instead of always picking a random new line</HelpText>
+      </Property>
+      <Property name="wav" display="Play VoiceLines from WAV" type="bool" defaultvalue="False">
+        <HelpText>Requires the "WAV" folder to be placed into your mods folder</HelpText>
+      </Property>
+    </Group>
+    
+    
+      <Group name="OnOffDEV" display="6. Just For Fun Settings">
+        <Property name="randMod" display="Random Custom Models" type="bool" defaultvalue="True"> 
+          <HelpText>Loads a random available custom model **Updated Default**</HelpText>
+        </Property>
+        <Property name="hideLevName" display="Hide Level Names" type="bool" defaultvalue="False"> 
+          <HelpText>Hide the level's name on the title card.</HelpText>
+        </Property>
+        <Property name="hideLevChar" display="Hide Level Characters" type="bool" defaultvalue="False"> 
+          <HelpText>Hide the character you play as on the title card.</HelpText>
+        </Property>
+        <Property name="dig" display="Dig On All Surfaces" type="bool" defaultvalue="False">
+          <HelpText>Hunters can dig more</HelpText>
+        </Property>
+        <Property name="fastLoad" display="Fast Loading" type="bool" defaultvalue="False">
+          <HelpText>Enable Fast Loading</HelpText>
+        </Property>
+        <Property name="instantLock" display="Instant LockOns" type="bool" defaultvalue="False">
+          <HelpText>Faster Lock Ons in Mechs</HelpText>
+        </Property>
+        <Property name="disKill" display="Disable Killplanes" type="bool" defaultvalue="False">
+          <HelpText>Disable Kill planes... duh</HelpText>
+        </Property>
+      <Property name="boostActive" display="Press Y to Boost" type="bool" defaultvalue="False">
+        <HelpText>Press Y to use your rings to build up boost! </HelpText>
+      </Property>
+      <Property name="boostSpeed" display="Boost Power" type="int" defaultvalue="0">
+        <HelpText>Set a INTEGER (between -2147483647 and 2147483647) as a percent increase in speed per frame during boost (20 is a good value)</HelpText>
+      </Property>
+      <Property name="rFog" display="Randomize Fog" type="bool" defaultvalue="False">
+        <HelpText>Randomizes the intensity/type of fog</HelpText>
+      </Property>
+      <Property name="rFogColor" display="Randomize Fog Color" type="bool" defaultvalue="False">
+        <HelpText>Randomizes the color of the fog</HelpText>
+      </Property>
+      <Property name="forceMission" display="Swap Mission 1 and Mission X" type="int" defaultvalue="1">
+        <HelpText>Set a INTEGER (between 1 and 5) to swap with Mission 1</HelpText>
+      </Property>
+        <Property name="rSize" display="Randomize Size" type="bool" defaultvalue="False">
+          <HelpText>Randomizes size of your character</HelpText>
+        </Property>
+        <Property name="noQoL" display="Disable Physics QoL Changes" type="bool" defaultvalue="False">
+          <HelpText>Disable any quality of life changes to character physics </HelpText>
+        </Property>
+        <Property name="OHKO" display="One-Hit Knock Out" type="bool" defaultvalue="False">
+          <HelpText>Die in one hit </HelpText>
+        </Property>
+        <Property name="vanBoss" display="Vanilla Exclusive Pools" type="bool" defaultvalue="False">
+          <HelpText>Makes boss fights, and any other exclusion stage/mission into vanilla</HelpText>
+        </Property>
+        <Property name="vanillaLives" display="Vanilla Life Counter" type="bool" defaultvalue="False">
+          <HelpText>Just the OG vanilla life counter</HelpText>
+        </Property>
+        <Property name="crashless" display="Remove Common Crashes" type="bool" defaultvalue="False">
+          <HelpText>Tries its hardest to prevent crashes</HelpText>
+        </Property>
+        <Property name="cursed" display="Cursed In-Game Cutscenes" type="bool" defaultvalue="False">
+          <HelpText>Big Foot, Sonic v SHadow 1, Green Forest potentially horrible textured cutscene</HelpText>
+        </Property>
+    </Group>
+
+    <Group name="rando" display="2. Randomizable Options">
+      <Property name="rmissions" display="Randomize Missions" type="bool" defaultvalue="False">
+        <HelpText>Random Mission Nums. Note that this feature is still buggy, but often times functional regardless</HelpText>
+      </Property>
+      <Property name="rMisText" display="Randomize Text" type="bool" defaultvalue="False">
+        <HelpText>Randomizes as much text as possible in the game</HelpText>
+      </Property>
+      <Property name="rM3Loc" display="Randomize M3 Chao Locations" type="bool" defaultvalue="False">
+        <HelpText>Randomizes the Mission 3 Chao Location on stage load [will be same on restart but change on exit]</HelpText>
+      </Property>
+      <Property name="chaoRadar" display="M3 Radar For The Lost Chao" type="bool" defaultvalue="False">
+        <HelpText>Create a radar for lost chao</HelpText>
+      </Property>
+      <Property name="rItems" display="Randomize Item Boxes" type="bool" defaultvalue="False">
+        <HelpText>Randomizes the contents of all item boxes</HelpText>
+      </Property>
+      <Property name="rEnemy" display="[Beta] Randomize Enemies" type="bool" defaultvalue="False">
+        <HelpText>Randomizes enemies</HelpText>
+      </Property>
+      <Property name="rEnemyChaos" display="[Beta] Randomize Enemies Chaos Mode" type="bool" defaultvalue="False">
+        <HelpText>Randomizes enemies even more, no logic built in.</HelpText>
+      </Property>
+      
+      <Property name="rM2" display="[Beta] Randomize Mission 2" type="bool" defaultvalue="False">
+        <HelpText>Randomizes Mission 2 between different objectives (shown during loading screen) </HelpText>
+      </Property>
+
+      <Property name="rMusic" display="Disable Randomized Music" type="bool" defaultvalue="False">
+        <HelpText>[True = turn option OFF] Randomize Music... duh</HelpText>
+      </Property>
+      <Property name="chaoMusic" display="Disable Chao Music" type="bool" defaultvalue="False">
+        <HelpText>[True = turn option OFF] Randomize Music will not include chao songs... duh</HelpText>
+      </Property>
+      <Property name="cADX" display="Consistent Music" type="bool" defaultvalue="False">
+        <HelpText>Keeps a 1:1 mapping of music instead of always picking a random new ADX</HelpText>
+      </Property>
+      <Property name="disRandL" display="Disable Random Story Order" type="bool" defaultvalue="False">
+        <HelpText>[Mostly for debugging] Removes the randomization of Story Order Levels</HelpText>
+      </Property>
+      <Property name="cutPlace" display="Cutscene Placement" type="cutPlaces" defaultvalue="random">
+        <HelpText>How cutscenes should be placed in the story.</HelpText>
+      </Property>
+      <Property name="storyMode" display="Story Mode" type="storyModes" defaultvalue="vanilla">
+        <HelpText>How long each story should be.</HelpText>
+      </Property>
+      <Property name="vanillaEnd" display="Vanilla Ending" type="bool" defaultvalue="True">
+        <HelpText>Keep each story's ending the same as the vanilla game.</HelpText>
+      </Property>
+      <Property name="skipFMV" display="Skip FMVs" type="bool" defaultvalue="False">
+        <HelpText>Remove all prerendered video scenes from the story.</HelpText>
+      </Property>
+    </Group>
+
+    <Group name="emerald" display="99. Color Setting">
+      <Property name="setEC" display="Set Emerald Color" type="bool" defaultvalue="False">
+        <HelpText>Set your own emerald color instead of the rainbow effect</HelpText>
+      </Property>
+      <Property name="red" display="Red" type="int" defaultvalue="0">
+        <HelpText>Set a INTEGER (between 0 and 255)</HelpText>
+      </Property>
+      <Property name="green" display="Green" type="int" defaultvalue="0">
+        <HelpText>Set a INTEGER (between 0 and 255)</HelpText>
+      </Property>
+      <Property name="blue" display="Blue" type="int" defaultvalue="0">
+        <HelpText>Set a INTEGER (between 0 and 255)</HelpText>
+      </Property>
+      <Property name="rave" display="Rave Egg Time Delay" type="int" defaultvalue="120">
+        <HelpText>Set a INTEGER > 1, where 1 is the fastest and higher is slower </HelpText>
+      </Property>
+    </Group>
+      <Group name="1Player" display="8. Replacement Characters [If Activated]">
+			<Property name="Sonic" type="Characters" defaultvalue="Sonic">
+				<HelpText>The default character to load when Sonic is selected.</HelpText>
+			</Property>
+			<Property name="Shadow" type="Characters" defaultvalue="Shadow">
+				<HelpText>The default character to load when Shadow is selected.</HelpText>
+			</Property>
+			<Property name="Tails" type="Characters" defaultvalue="Tails">
+				<HelpText>The default character to load when Tails is selected.</HelpText>
+			</Property>
+			<Property name="Eggman" type="Characters" defaultvalue="Eggman">
+				<HelpText>The default character to load when Eggman is selected.</HelpText>
+			</Property>
+			<Property name="Knuckles" type="Characters" defaultvalue="Knuckles">
+				<HelpText>The default character to load when Knuckles is selected.</HelpText>
+			</Property>
+			<Property name="Rouge" type="Characters" defaultvalue="Rouge">
+				<HelpText>The default character to load when Rouge is selected.</HelpText>
+			</Property>
+			<Property name="MechTails" display="Mech Tails" type="Characters" defaultvalue="MechTails">
+				<HelpText>The default character to load when Mech Tails is selected.</HelpText>
+			</Property>
+			<Property name="MechEggman" display="Mech Eggman" type="Characters" defaultvalue="MechEggman">
+				<HelpText>The default character to load when Mech Eggman is selected.</HelpText>
+			</Property>
+		</Group>
+    <Group name="pool" display="7. Disable Characters">
+      <Property name="Sonic" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Shadow" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Amy" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Metal Sonic" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Knuckles" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Rouge" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Tikal" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Chaos" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick this character [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Mech Tails/Tails" display="Mech Tails" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Mech Eggman/Eggman" display="Mech Eggman" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Chao Walker/Tails" display="Chao Walker" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Dark Chao Walker/Eggman" display="Dark Chao Walker" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Eggman" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Tails" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+      <Property name="Super" type="bool" defaultvalue="False">
+        <HelpText>Do not allow Rando to pick these characters [some stage exclusions apply]</HelpText>
+      </Property>
+    </Group>
+
+    <Group name="stages" display="9. Disable Stages">
+      <Property name="3" display="Green Forest" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property>
+      <Property name="4" display="White Jungle" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="5" display="Pumpkin Hill" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="6" display="Sky Rail" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="7" display="Aquatic Mine" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="8" display="Security Hall" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="9" display="Prison Lane" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="10" display="Metal Harbor" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="11" display="Iron Gate" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+           <Property name="12" display="Weapons Bed" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="13" display="City Escape" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="14" display="Radical Highway" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="16" display="Wild Canyon" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="17" display="Mission Street" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="18" display="Dry Lagoon" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="19" display="Shadow/Sonic 1" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="20" display="Tails/Eggman 1" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="21" display="Sand Ocean" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="22" display="Crazy Gadget" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="23" display="Hidden Base" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="24" display="Eternal Engine" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="25" display="Death Chamber" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="26" display="Egg Quarters" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="27" display="Lost Colony" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="28" display="Pyramid Cave" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="29" display="Tails/Eggman 2" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="30" display="Final Rush" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="31" display="Green Hill Zone" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode (only appears if other option(s) are enabled)</HelpText>
+      </Property> 
+                 <Property name="32" display="Meteor Herd" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="33" display="Knuckles/Rouge" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="36" display="Cannon's Core" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="40" display="Final Chase" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="42" display="Sonic/Shadow 2" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="44" display="Mad Space" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="43" display="Cosmic Wall" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="60" display="Big Foot" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="61" display="Hot Shot" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="62" display="Flying Dog" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="63" display="King Boom Boo" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="64" display="Egg Golem (Hero)" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="65" display="Biolizard" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="66" display="Final Hazard" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="67" display="Egg Golem (Dark)" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+                 <Property name="70" display="Route 101/280" type="bool" defaultvalue="False">
+        <HelpText>Replace this stage with a single cutscene in Story Mode</HelpText>
+      </Property> 
+       
+    </Group>
+
+
+    <Group name="sponsor" display="Chao Gameplay - Kell">
+      <Property name="levelUp" display="Level Up Chao Per Stage" type="bool" defaultvalue="False">
+        <HelpText>Increases chao level based on character type at the end of each level</HelpText>
+      </Property>
+      <Property name="rChaoLoad" display="Randomize Chao Per Stage" type="bool" defaultvalue="False">
+        <HelpText>Randomizes the loaded chao each stage (forces you into Garden afterwards to update) </HelpText>
+      </Property>
+    </Group>
+  
+	</Groups>
+	<Enums>
+    <Enum name="OnOff">
+      <EnumMember name="1" display="True" />
+      <EnumMember name="0" display="False" />
+    </Enum>
+    <Enum name="swapType">
+      <EnumMember name="stage" display="Replace Per Stage"/>
+      <EnumMember name="character" display="Replace Per Character" />
+      <EnumMember name="load" display="Replace Per Load" />
+    </Enum>
+    <Enum name="vl">
+      <EnumMember name="rand" display="Pure Random"/>
+      <EnumMember name="orand" display="No Omochao Random" />
+      <EnumMember name="samerand" display="Same Char SA2"/>
+      <EnumMember name="mainrand" display="Main Chars vs Other Chars SA2" />
+    </Enum>
+    <Enum name="setTimes">
+      <EnumMember name="off" display="Off"/>
+      <EnumMember name="before" display="Before" />
+      <EnumMember name="after" display="After"/>
+    </Enum>
+    <Enum name="subs">
+      <EnumMember name="off" display="Off"/>
+      <EnumMember name="cuts" display="Cutscenes/ Menus Only (Stable)" />
+      <EnumMember name="on" display="Always (May Crash)"/>
+    </Enum>
+		<Enum name="Characters">
+      <EnumMember name="Random" />
+			<EnumMember name="Sonic" />
+			<EnumMember name="Shadow" />
+			<EnumMember name="Tails" />
+			<EnumMember name="Eggman" />
+			<EnumMember name="Knuckles" />
+			<EnumMember name="Rouge" />
+			<EnumMember name="MechTails" display="Mech Tails" />
+			<EnumMember name="MechEggman" display="Mech Eggman" />
+			<EnumMember name="Amy" />
+			<EnumMember name="MetalSonic" display="Metal Sonic" />
+			<EnumMember name="Tikal" />
+			<EnumMember name="Chaos" />
+			<EnumMember name="ChaoWalker" display="Chao Walker" />
+			<EnumMember name="DarkChaoWalker" display="Dark Chao Walker" />
+			<EnumMember name="SonicAlt" display="Sonic (Alt Costume)" />
+			<EnumMember name="ShadowAlt" display="Shadow (Alt Costume)" />
+			<EnumMember name="KnucklesAlt" display="Knuckles (Alt Costume)" />
+			<EnumMember name="RougeAlt" display="Rouge (Alt Costume)" />
+			<EnumMember name="MechTailsAlt" display="Mech Tails (Alt Costume)" />
+			<EnumMember name="MechEggmanAlt" display="Mech Eggman (Alt Costume)" />
+			<EnumMember name="super" display="Super Sonic" />
+		</Enum>
+    <Enum name="Stories">
+      <EnumMember name="None" />
+      <EnumMember name="Hero" display="Hero Story" />
+      <EnumMember name="Dark" display="Dark Story" />
+      <EnumMember name="All" display="All Stories" />
+      <EnumMember name="173" display="173 Emblems" />
+    </Enum>
+    <Enum name="cutPlaces">
+      <EnumMember name="random" display="Random" />
+      <EnumMember name="inplace" display="Vanilla" />
+      <EnumMember name="exclude" display="No Cutscenes" />
+    </Enum>
+    <Enum name="storyModes">
+      <EnumMember name="vanilla" display="Vanilla Lengths" />
+      <EnumMember name="random" display="Random Lengths" />
+      <EnumMember name="single" display="Combined Story" />
+    </Enum>
+	</Enums>
+</ConfigSchema>

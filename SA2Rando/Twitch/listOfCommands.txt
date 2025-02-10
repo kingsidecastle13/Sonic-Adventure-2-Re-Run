@@ -1,0 +1,61 @@
+!win	-Win the level
+!ring+	- +10 Ring
+!ring-	- -10 Ring
+!life+	- +1 Life
+!life-	- -1 Life
+!vert	-Massive Instant Height
+!speed	-increase speed and caps
+!magnet	-Magnet shield
+!barrier	-Barrier
+!jump	-increase jump stats
+!score+	- 1000 Score
+!score-	- -1000 Score
+!hp+	- Increase your mech hp
+!dmg	-Damage your character
+!song	-Change song
+!bosshp+	-add hp to character bosses
+!bosshp-	-remove hp from character bosses
+!chaoscontrol	-chaos control player
+!voiceline	-play a voiceline
+!chaokey	-give player the chao key
+!newchar	- swaps to a new char(can crash, leave disabled or set high cost)
+!swapchar	- swaps to a different character of the same type
+!bonus 		-gives random points with a bonus symbol appearing on the screen
+!nut		-random omochao voiceline about nuts
+!chao		-spawn a chao whilst in the garden
+!chaovert	-vert chao 1
+!otter		-dont worry about it, doesnt work
+!die		-yep
+!crash		-again, yep
+!nyoom		-insane speed for 3 seconds
+!gravity	-flips gravity for 3 seconds
+!nostick	-disables joystick for 3 seconds
+!whatstick	-corrupts stick inputs for 3 seconds
+!confuse	-uses the ingame confuse for 3 seconds
+!item		-gives random item
+!yeet		-shoves u a random amount in a random direction
+!nohops		-opposite to !jump
+!swapmodel	-rerolls your model for the current character
+
+
+**Non-gameplay
+!points		-display points
+!info		-points users to the next two commands for more info
+!pointinfo	-displays your current points system
+!commandinfo	-displays all commands(cost)
+!modinfo	-teach mods what the below commands do
+
+
+**Mod commands
+!pointsall	-give everyone X points[see currencyRates for X]
+!pointsactive	-give actives X points[see currencyRates for X]
+!points.user.Y 	-give user Y points
+!pointsall.Y	-give everyone Y points
+!pointsactive.Y	-give actives Y points
+!resetspeed
+!resetsize
+!blacklist.Y	-bans user Y from the bot
+!whitelist.Y	-allows user Y to use the bot again
+!whitelist.all	-clears the ban list
+!chaoson	-toggle on 0 cost to all commands that are not -1
+!chaosoff	-toggle off 0 cost to all commands that are not -1

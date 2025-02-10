@@ -1,0 +1,25 @@
+System.ArgumentException: Source array was not long enough. Check srcIndex and length, and the array's lower bounds.
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at SonicRetro.SAModel.ByteConverter.ToInt32(Byte[] value, Int32 startIndex) in E:\Programs\sa_tools\SAModel\ByteConverter.cs:line 94
+   at SonicRetro.SAModel.ChunkAttach..ctor(Byte[] file, Int32 address, UInt32 imageBase, Dictionary`2 labels) in E:\Programs\sa_tools\SAModel\ChunkAttach.cs:line 100
+   at SonicRetro.SAModel.Attach.Load(Byte[] file, Int32 address, UInt32 imageBase, ModelFormat format, Dictionary`2 labels) in E:\Programs\sa_tools\SAModel\Attach.cs:line 66
+   at SonicRetro.SAModel.NJS_OBJECT..ctor(Byte[] file, Int32 address, UInt32 imageBase, ModelFormat format, NJS_OBJECT parent, Dictionary`2 labels, Dictionary`2 attaches) in E:\Programs\sa_tools\SAModel\NJS_OBJECT.cs:line 113
+   at SonicRetro.SAModel.SAMDL.MainForm.LoadBinFile(Byte[] file) in E:\Programs\sa_tools\SAMDL\MainForm.cs:line 295
+   at SonicRetro.SAModel.SAMDL.MainForm.LoadFile(String filename) in E:\Programs\sa_tools\SAMDL\MainForm.cs:line 202
+   at SonicRetro.SAModel.SAMDL.MainForm.openToolStripMenuItem_Click(Object sender, EventArgs e) in E:\Programs\sa_tools\SAMDL\MainForm.cs:line 145
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)

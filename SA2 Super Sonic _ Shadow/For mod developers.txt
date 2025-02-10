@@ -1,0 +1,24 @@
+
+If you want to make your skin mod working with Super Sonic / Super Shadow, here's what you need to know/do:
+- In the vanilla game, Super Sonic and Shadow don't have any ball form (jump ball), therefore they don't have any texture for it either.
+- This mod takes the ball model directly from Sonic / Shadow models and also add a new texture file which contains a texture for the ball.
+
+
+For the model part, you don't have to do anything since this mod directly takes the ball model loaded from Sonic in-game, so it will work even if you replaced it.
+
+However, the new textures for the jump ball doesn't exist originally, therefore, if you want to add support for your mod, you can use ReplaceTex which will replace only this specific texture from the mod:
+- In your mod folder, create a folder "ReplaceTex".
+- Open the PRS folder from SA2 Super Sonic mod.
+- Open the texture archive "ss_efftex.pak" (or ssh) with Texture Editor, then "File -> Export Folder Texture Pack".
+- Select your ReplaceTex from your own mod folder for the destination (do not rename the file).
+- From your Mod folder, open the ReplaceTex folder that you created earlier, you should now see the Texture Pack that you exported, open it and delete all the textures except the jumpball one (sstx_upgspin.png).
+- Open index.txt, delete all the lines except the one that contains "sstx_upgspin.png" (should be the first one if you are editing Sonic jumpball) then save.
+
+That should be it.
+
+Worth to specify, since version 3.0, the mod also adds a custom life icon and one up, which you can also replace with your own mod with the exact same method that I described.
+
+Don't forget to load your mod AFTER SA2 Super Sonic (below) to make sure your mod has priority.
+
+If you have any question, you can ask me on the X-Hax Discord or DM me on Gamebanana/Twitter. 
+

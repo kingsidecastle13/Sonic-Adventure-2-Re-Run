@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ConfigSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonicretro.org">
+	<Groups>
+		<Group name="Sonic" display="1 - Speed-type Characters">
+			<Property name="LightDash" display="Light Dash Behavior" type="LightDash" defaultvalue="Reworked (Main Model Used)">
+				<HelpText>Changes the afterimage effect for the Light Dash action. "Original Behavior" uses the static pre-posed model in Sonic/Shadow's model packs if they exist.</HelpText>
+			</Property>
+		</Group>
+
+		<Group name="Knuckles" display="2 - Hunting-type Characters">
+		  <Property name="Uppercut" display="Spiral Upper/Screw Kick Behavior" type="Uppercut" defaultvalue="Reworked (Main Model Used)">
+			<HelpText>Changes the afterimage effect for the straight uppercut action.</HelpText>
+		  </Property>
+		  <Property name="Dive" type="Dive" defaultvalue="Reworked (Main Model Used)" display= "Drill Claw/Dive Behavior">
+			<HelpText>Changes the afterimage effect for the dive action. "Original Behavior" uses the static pre-posed model in Knuckles/Rouge's model packs if they exist.</HelpText>
+		  </Property>
+		</Group>
+		</Groups>
+		<Enums>
+			<Enum name = "LightDash">
+				<EnumMember name = "Original Behavior w/ Shadow Bugfix" />
+				<EnumMember name = "Reworked (LoD2 Model Used)" />
+				<EnumMember name = "Reworked (Main Model Used)" />
+			</Enum>
+			<Enum name = "Uppercut">
+				<EnumMember name = "Original Behavior" />
+				<EnumMember name = "Reworked (Main Model Used)" />
+			</Enum>
+			<Enum name = "Dive">
+				<EnumMember name = "Original Behavior" />
+				<EnumMember name = "Reworked (LoD Model Used)" />
+				<EnumMember name = "Reworked (Main Model Used)" />
+			</Enum>
+		</Enums>
+</ConfigSchema>

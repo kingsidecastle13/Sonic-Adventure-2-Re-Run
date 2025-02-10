@@ -1,0 +1,6 @@
+AFKTime(seconds)	200
+UpdateTime(seconds)	60
+CurrencyPerUpdate	5
+PointsPerGiveCommand	5
+PointsForNewUser	10
+PointsPerBit		2

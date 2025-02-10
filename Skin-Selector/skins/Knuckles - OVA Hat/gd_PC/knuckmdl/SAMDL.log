@@ -1,0 +1,15 @@
+SharpDX.SharpDXException: HRESULT: [0x88760868], Module: [SharpDX.Direct3D9], ApiCode: [D3DERR_DEVICELOST/DeviceLost], Message: Unknown
+   en SharpDX.Result.CheckError() en C:\projects\sharpdx\Source\SharpDX\Result.cs:línea 195
+   en SharpDX.Direct3D9.Device.Present(IntPtr sourceRectRef, IntPtr destRectRef, IntPtr hDestWindowOverride, IntPtr dirtyRegionRef) en C:\projects\sharpdx\Source\SharpDX.Direct3D9\Generated\Interfaces.cs:línea 4949
+   en SharpDX.Direct3D9.Device.Present() en C:\projects\sharpdx\Source\SharpDX.Direct3D9\Device.cs:línea 600
+   en SonicRetro.SAModel.SAMDL.MainForm.DrawEntireModel() en E:\Programs\sa_tools\SAMDL\MainForm.cs:línea 600
+   en SonicRetro.SAModel.SAMDL.MainForm.Panel1_MouseMove(Object sender, MouseEventArgs e) en E:\Programs\sa_tools\SAMDL\MainForm.cs:línea 1058
+   en System.Windows.Forms.Control.OnMouseMove(MouseEventArgs e)
+   en System.Windows.Forms.Control.WmMouseMove(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   en System.Windows.Forms.UserControl.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
